@@ -1,0 +1,99 @@
+.header { background: #323A45; }
+#banner { background: #e9e6e1;  }
+::-moz-selection{ color:#fff; background: #f0505c; }
+::selection { color: #fff; background: #f0505c; }
+blockquote { border-left: 3px solid #2BA6CB; }
+
+.zocial, a.zocial { color: #fff; background: #2BA6CB; }
+.zocial:hover, .zocial:focus { color: #fff; background: #2980B9; }
+
+.well { background-color: #D3CDC4; }
+.dropcap2 { color: #2BA6CB; }
+
+/**** BUTTONS ****/
+.btn-primary { background-color: #2BA6CB; border: 0;}
+.btn-primary:hover { background-color: #34495E;}
+.btn-inverse { background-color: #323A45;}
+.btn-inverse:hover { background-color: #3e4957;}
+.btn:visited, .btn:focus { color: #fff; }
+.btn-outline:hover { background-color: #3e4957!important;}
+
+/**** LINKS ****/
+a { color: #f0505c; }
+a:hover { color: #f0505c; }
+
+/**** WORK LINKS ****/
+.portfolio-links i { background-color: #3E4957; }
+.portfolio-links a:hover i { background-color: #323A45; }
+
+
+/***************************************************
+	COLOURS
+ ***************************************************/
+
+.hue { color: #2BA6CB; }
+.white { color: #fff; }
+.magnolia { color: #E9E6E1; }
+.gray	{	color: #565656;}
+.grey { color: #999; }
+.grey2 { color: #69767F; }
+.asphalt { color: #34495E; }
+.colour { color: #f0505c; }
+.salmon { color: #f95c7c;}
+.mygreen {color: #138D75;}
+.red {color: #f0505c;}
+.myblue {color: #f0505c;}
+.saffron {color:#E67E22;}
+.michiganmaize {color:#F1C40F;}
+.darkgreen {color: #4dd5bc;}
+.hue_block {
+	background-color: #2BA6CB;
+	color: #fff;
+	padding: 0px 4px 2px;
+	-moz-transition: all 0.3s ease;
+	-webkit-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+.hue_block:hover { background-color: #178bae; }
+
+.bold { font-weight: 500;}
+.doublebold	{font-weight: 700;}
+/**** IMAGE HOVER COLOUR ****/
+.hover_img:hover, .hover_colour {
+	background: #2980B9 url(../img/zoom.png) no-repeat 50% 50%;
+	-webkit-box-shadow: inset 0 0 0 7px rgba(255,255,255,0.15);
+	-moz-box-shadow: inset 0 0 0 7px rgba(255,255,255,0.15);
+    box-shadow: inset 0 0 0 7px rgba(255,255,255,0.15);
+}
+
+
+/***************************************************
+	PORTFOLIO, GALLERY & THUMB CAROUSELS
+ ***************************************************/
+
+/**** PORTFOLIO ****/
+#filters li a, #filters2 li a { color: #555; border: 2px solid #767676; }
+#filters li a.selected, #filters2 li a.selected { background: #2BA6CD; color: #fff;  border: 2px solid #2BA6CD; }
+#filters li a:hover, #filters2 li  a:hover { color:#fff; border: 2px solid #34495E; background: #34495E; }
+
+/**** GALLERY ****/
+.holder a {  color: #555; border: 2px solid #767676; }
+.holder a:hover {color: #fff; border: 2px solid #34495E; background: #34495E; }
+.holder a.jp-previous, .holder a.jp-next, .holder a.jp-disabled, .holder a.jp-disabled, focus:a.jp-disabled {
+	border: 2px solid #767676;
+	color: #767676;
+}
+.holder a.jp-current { background: #2BA6CD; color: #fff; border: 2px solid #2BA6CD; }
+a.jp-disabled:hover, .holder a.jp-next:hover { color: #fff; border: 2px solid #34495E; background: #34495E; }
+
+/* CAROUSELS */
+.slider-title { background-color: #34495E; color: #bbb; }
+.slider-title:after { border-top-color: #34495E; }
+
+/* Carousel Arrows*/
+.widget-scroll-prev:hover, .widget-scroll-next:hover, .widget-scroll-prev2:hover, .widget-scroll-next2:hover { background: #2BA6CB; }
+
+
+/**** ICONS EXAMPLE BG HOVER ****/
+.fontawesome-icon-list .fa-hover a:hover{background-color:#2BA6CB;}

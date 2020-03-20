@@ -1,0 +1,571 @@
+<html>
+<HEAD>
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,100%7CRoboto:400,700,300,100' rel='stylesheet' type='text/css'>
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="css/jqueryui1.12.1.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="css/newtonstyle.css">
+
+
+<script src="https://d3js.org/d3.v3.min.js"></script>
+<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+  <meta name="robots" content="all,follow">
+  <meta name="googlebot" content="index,follow,snippet,archive">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Newton's Second Law of Motion</title>
+
+  <meta name="keywords" content="">
+  <!-- Bootstrap and Font Awesome css -->
+  <link href="css/font-awesome.css" rel="stylesheet">
+  <!-- Theme stylesheet -->
+  <link href="css/style.default.css" rel="stylesheet" id="theme-stylesheet">
+
+  <!-- CSS Animations -->
+  <link href="css/animate.css" rel="stylesheet">
+
+  <!-- owl carousel css -->
+
+  <link href="css/owl.carousel.css" rel="stylesheet">
+  <link href="css/owl.theme.css" rel="stylesheet">
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="favicon.png">
+
+  <!-- Colours -->
+  <link id="colours" rel="stylesheet" href="css/colour.css" />
+
+  <!--Full Story script-->
+  <script>
+  window['_fs_debug'] = false;
+  window['_fs_host'] = 'fullstory.com';
+  window['_fs_org'] = 'D1SFA';
+  window['_fs_namespace'] = 'FS';
+  (function(m,n,e,t,l,o,g,y){
+      if (e in m) {if(m.console && m.console.log) { m.console.log('FullStory namespace conflict. Please set window["_fs_namespace"].');} return;}
+      g=m[e]=function(a,b){g.q?g.q.push([a,b]):g._api(a,b);};g.q=[];
+      o=n.createElement(t);o.async=1;o.src='https://'+_fs_host+'/s/fs.js';
+      y=n.getElementsByTagName(t)[0];y.parentNode.insertBefore(o,y);
+      g.identify=function(i,v){g(l,{uid:i});if(v)g(l,v)};g.setUserVars=function(v){g(l,v)};
+      g.shutdown=function(){g("rec",!1)};g.restart=function(){g("rec",!0)};
+      g.consent=function(a){g("consent",!arguments.length||a)};
+      g.identifyAccount=function(i,v){o='account';v=v||{};v.acctId=i;g(o,v)};
+      g.clearUserCookie=function(){};
+  })(window,document,window['_fs_namespace'],'script','user');
+  </script>
+
+</HEAD>
+
+<body>
+
+  <!-- *** NAVBAR ***
+  _________________________________________________________ -->
+
+  <div class="navbar navbar-default navbar-fixed-top" role="navigation" id="navbar">
+          <div class="container">
+              <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="index.html">JAEE <span class="gray">APTE</span>.</a>
+              </div>
+
+              <div class="navbar-collapse collapse">
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="index.html#projectoverview" class="page-scroll">Work</a>
+                    </li>
+                    <li><a target="_blank" href="https://www.flickr.com/photos/souls_of_the_enchanted" >Art</a>
+                              </li>
+                    <li><a href="resources/jaee-apte-resume.pdf" target="_blank">Resume</a>
+                              </li>
+                    <li><a href="index.html#contact" class="page-scroll">Contact</a>
+                    </li>
+                </ul>
+
+
+            <!-- <ul class="nav navbar-nav navbar-left">
+                        <li><a href="ecoach.html">Previous</a>
+                        </li>
+              <li><a href="xplor.html">Next</a>
+                        </li>
+            </ul> -->
+              </div>
+              <!--/.nav-collapse -->
+
+          </div>
+      </div>
+      <!-- /#navbar -->
+
+      <!-- *** NAVBAR END *** -->
+
+
+<section>
+
+  <div class="col-sm-12">
+    <div class="description">
+        <h1>Newton's Second Law of Motion</h1>
+				The acceleration of an object as produced by a net force is directly proportional to the magnitude of the net force, in the same direction as the net force, and inversely proportional to the mass of the object.
+        <!-- <br><img src="images/firstlaw.jpg" alt="The Poster" title="The Poster" class="img-responsive"/><br><br> -->
+        <br><div class="formula">F = m * a</div>
+				<div class="sidenote"><b>F:</b> force exerted,<br>
+          <b>m: </b> mass of the object, <br>
+          <b>a: </b>acceleration produced as a result.<br><br>
+          Acceleration is simply the rate of change of velocity, that means by 'how much' will the velocity of the object increase or decrease per unit time.</div>
+        <h1 class="myblue bold">EXPERIMENT 1</h1>
+        <div class="sidenote">To understand this law, we will examine the effect of force and mass on acceleration individually. First, lets keep a constant mass of 100kg and vary the force.</div>
+        <br><h3>MASS = 10Kg</h3>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="experiment" id="experiment1">
+  <div class="col-sm-12">
+    <p>Move the slider to assign a new value to force and click on <b>"ROLL"</b>. Try this with 2-3 different values of force, then click on <b>"PLOT"</b></p>
+    <div class="col-sm-6">
+      <div id="slider1">
+        <div id="force-range" class="ui-slider-handle"></div>
+      </div>
+      <label class="labelmin">500N</label> <label class="labelmax">2500N</label><br>
+
+<script type="text/javascript">
+
+// add the tooltip area to the webpage
+// var tooltip = d3.select("body").append("div")
+//     .attr("class", "tooltip")
+//     .style("opacity", 0);
+
+var svgHeight1 = 200;
+var svgWidth1 = 600;
+var svgHeight2 = 400;
+var svgWidth2 = 600;
+var forceminmax = [500,2500];
+var circleRadii = [40];
+var force = 500;	//scale: 500(default), 1000, 1500, 2000
+var mass = 10;	//scale: 20,40,60,80,100(default)
+var acc = 50;
+var duration = 5000;
+var scatterPlotDataset = [];
+var colorScale = d3.scale.linear().domain(forceminmax).range([0,255]);
+var experiment1DIV = d3.select('body')
+                    .append('div')
+                  .attr("class","experiment1DIV");
+var mainDIV = d3.select('body')
+                 .append('div')
+                  .attr("class","mainDIV")
+
+var svgContainer = mainDIV.append('svg')
+                                   .attr("width", 600)
+                                   .attr("height", 350);
+var circles = svgContainer.selectAll("circle")
+                         .data(circleRadii)
+                         .enter()
+                         .append('circle');
+var box = svgContainer.append('rect')
+                         .attr('x', svgWidth1 - 530)
+                         .attr('y', svgHeight1 - 100)
+                           .attr("width", svgWidth1-70)
+                           .attr("height", circleRadii * 2.5)
+                           .style("fill", "none")
+                           .style("stroke", "black");
+var circleAttributes = circles
+                   .attr('cx', svgWidth1 - 490)
+                   .attr('cy', svgHeight1 - 50)
+                   .attr('r', function (d) { return d; })
+                   .style("fill", function(d){
+                        return "rgb(240, 80, 92)";
+                   });
+
+var rollButton= experiment1DIV.append("button")
+            .text("ROLL")
+            .attr("type","button")
+            .attr('x', svgWidth1 - 550)//your work here
+            .attr('y', svgHeight1 - 170)//your work here
+            .style("height",50)
+            .style("width",100);
+
+var forceLabel = svgContainer.append('text')
+                            .text(function(d) { return "FORCE: "+ force })
+                            .attr('x', svgWidth1 - 530)//your work here
+                            .attr('y', svgHeight1 - 170)//your work here
+                            .attr("font-family","Lato")
+                            .attr("font-size","18pt");
+
+var accLabel = svgContainer.append('text')
+                            .text(function(d) { return "ACCELERATION: "+ acc })
+                            .attr('x', svgWidth1 - 250)//your work here
+                            .attr('y', svgHeight1 -170)//your work here
+                            .attr("font-family","Lato")
+                            .attr("font-size","18pt");
+rollButton.on('click', function() {
+svgContainer.selectAll("circle")
+  .transition()
+  .duration(duration)
+  .attr("cx", svgWidth1 - circleRadii)
+  .attr("cy", svgHeight1 - 50)
+  .attr("r", function (d) { return d; })
+  .ease("exp-in");
+
+scatterPlotDataset.push({
+  "force":   force,
+  "mass": mass,
+  "acc": acc
+});
+});
+
+$( function() {
+  var handle = $( "#force-range" );
+  $( "#slider1" ).slider({
+    min:forceminmax[0],
+  max:forceminmax[1],
+  value:500,
+    slide: function( event, ui ) {
+      handle.text( ui.value );
+      force = ui.value;
+      acc = force/mass;
+      duration = 100000/acc;
+      forceLabel.transition()
+                  .text(function(d) { return "FORCE: "+ ui.value })
+      accLabel.transition()
+                  .text(function(d) { return "ACCELERATION: "+ acc })
+      svgContainer.selectAll("circle")
+         .attr("cx", svgWidth1 - 490)
+         .attr("cy", svgHeight1 - 50)
+         .attr("r", function (d) { return d; })
+         .style("fill", function(d){
+              return "rgb(240, 80, 92)";
+         });
+      }
+    });
+} );
+
+var graphDIV = d3.select('body')
+                .append('div')
+                .attr("class","graph1")
+var graphSVG = graphDIV.append('svg')
+                      .attr("width", 600)
+                      .attr("height", 400);
+var xScale = d3.scale.linear()
+      .domain([0, 2500])
+      .range([150,svgWidth2-50]);
+var yScale = d3.scale.linear()
+  .domain([250,0])
+  .range([50, svgHeight2-100]);
+
+
+var scatterX = d3.svg.axis().scale(xScale).orient("bottom").ticks(5);
+var scatterY = d3.svg.axis().scale(yScale).orient("left").ticks(5);
+graphSVG.append('g').attr("class","axis").attr("transform","translate(0,"+(svgHeight2-100)+")").call(scatterX);
+graphSVG.append("text")
+     .attr("class", "xlabel")
+     .attr('x', svgWidth2/2)
+     .attr("y", svgHeight2-50)
+     .style("text-anchor", "end")
+     .text("FORCE (N)");
+
+graphSVG.append('g').attr("class","axis").attr("transform","translate("+150+",0)").call(scatterY);
+
+graphSVG.append("text")
+     .attr("class", "ylabel")
+     .attr('x', -50)
+     .attr("y", svgHeight2-300)
+     .attr("transform", "rotate(-90)")
+     .style("text-anchor", "end")
+     .text("ACCELERATION");
+
+var plotButton= experiment1DIV.append("button")
+            .text("PLOT")
+            .attr("type","button")
+            .attr('x', svgWidth1 - 550)//your work here
+            .attr('y',(svgHeight1 -170))//your work here
+            .style("height",50)
+            .style("width",100);
+
+plotButton.on('click', function() {
+graphSVG.selectAll("circle")
+    .data(scatterPlotDataset)
+    .enter()
+    .append("circle")
+    .attr("cx", function(d) {
+        return xScale(d.force);
+    })
+    .attr("cy", function(d) {
+        return yScale(d.acc);
+    })
+    .attr("r", function(d){
+        return 7.5;
+    })
+    .attr("stroke", "black")
+    .attr("fill", function(d){
+         //return "rgb("+Math.round(colorScale(d.force))+",0,"+Math.round(colorScale(d.force))+")"
+         return "rgb(240, 80, 92)";
+    });
+});
+</script>
+</div>
+</div>
+</div>
+</section>
+
+<section>
+  <div class="col-sm-12">
+    <div class="experiment">
+      <h1 class="myblue bold">ANALYSIS</h1>
+      <p>Did you notice the change in the ball's speed as you increased the force? If you notice that the ball moved faster,
+        then you're right! This kind of relation between two variables is called <b>"Direct Proportion".</b>
+        This means, as one increases, the other variable also increases.<br><br> Now look at the graph, how does it look?
+        Does it look like the graph here, a straight line at an angle of about 45 degrees? If it doesn't, why don't you try
+        out a few more values of force?
+        <img src="img/newtongraph1.jpg" alt="Acc vs Force" title="Acc vs Force" class="img-responsive"/><br><br>
+
+        This kind of relationship is called
+        <b>"Linear Dependency"</b>. This means as one variable increases, the other by the same factor irrepective
+        of the value of either variable. That means, in this case, whether force is 500N or 2500N,
+        acceleration will increase by same factor of 0.1 (for a constant mass of 10Kg)<br><br></p>
+
+      <h1 class="myblue bold">EXPERIMENT 2</h1>
+      <div class="sidenote">Now, lets keep a constant force of 2500N and vary the mass.
+      <br><h3>FORCE = 2500N</h3><br></div>
+      <p>Move the slider to assign a new value to mass and click on <b>"ROLL".</b> Try this with 2-3 different values of mass, then click on <b>"PLOT"</b>.</p>
+      <div class="col-sm-6">
+        <!-- <input type="range" id="rangeMass" value="20" min="20" max="100"> -->
+        <div id="slider">
+          <div id="mass-range" class="ui-slider-handle"></div>
+        </div>
+        <label class="labelmin">10Kg</label> <label class="labelmax">100Kg</label>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <script type="text/javascript">
+
+  // add the tooltip area to the webpage
+  // var tooltip = d3.select("body").append("div")
+  //     .attr("class", "tooltip")
+  //     .style("opacity", 0);
+
+  var svgHeight3 = 200;
+  var svgWidth3 = 600;
+  var svgHeight4 = 400;
+  var svgWidth4 = 600;
+  var massminmax = [10,100];
+
+  var force2 = 2500;
+  var mass2 = 10;	//scale: 20,40,60,80,100(default)
+  var acc2 = 250;  //125, 62.5, 41.66, 31.25, 25
+  var duration2 = 100000/acc2;  //2000, 4000, 6000, 8000, 10000
+  var scatterPlotDataset2 = [];
+  var colorScale2 = d3.scale.linear().domain(massminmax).range([0,255]);
+
+  var experiment2DIV = d3.select('body')
+                      .append('div')
+                    .attr("class","experiment2DIV")
+  var mainDIV2 = d3.select('body')
+                   .append('div')
+                    .attr("class","mainDIV2")
+  var svgContainer2 = mainDIV2.append('svg')
+                                     .attr("width", 600)
+                                     .attr("height", 200)
+                                     .style("float","left");
+  var circles2 = svgContainer2.selectAll("circle")
+                           .data(circleRadii)
+                           .enter()
+                           .append('circle');
+  var box2 = svgContainer2.append('rect')
+                           .attr('x', svgWidth3 - 530)
+                           .attr('y', 50)
+                             .attr("width", svgWidth3-70)
+                             .attr("height", circleRadii * 2.5)
+                             .style("fill", "none")
+                             .style("stroke", "black");
+  var circleAttributes2 = circles2
+                     .attr('cx', svgWidth3 - 490)
+                     .attr('cy', 100)
+                     .attr('r', function (d) { return d; })
+                     .style("fill", function(d){
+                          return "rgb(240, 80, 92)";
+                     });
+
+  var rollButton2= experiment2DIV.append("button")
+              .text("ROLL")
+              .attr("type","button")
+              .attr('x', svgWidth3 - 550)//your work here
+              .attr('y',(svgHeight3 -170))//your work here
+              .style("height",50)
+              .style("width",100);
+
+  var massLabel = svgContainer2.append('text')
+                              .text(function(d) { return "MASS: "+ mass2 })
+                              .attr('x', svgWidth3 - 530)//your work here
+                              .attr('y',(svgHeight3 -170))//your work here
+                              .attr("font-family","Lato")
+                              .attr("font-size","18pt");
+
+  var accLabel2 = svgContainer2.append('text')
+                              .text(function(d) { return "ACCELERATION: "+ acc2 })
+                              .attr('x', svgWidth3 - 250)//your work here
+                              .attr('y',(svgHeight3 -170))//your work here
+                              .attr("font-family","Lato")
+                              .attr("font-size","18pt");
+
+  rollButton2.on('click', function() {
+  svgContainer2.selectAll("circle")
+    .transition()
+    .duration(duration2)
+    .attr("cx", 560)
+    .attr("cy", 100)
+    .attr("r", function (d) { return d; })
+    .ease("exp-in");
+
+  scatterPlotDataset2.push({
+    "force":   force2,
+    "mass": mass2,
+    "acc": acc2
+  });
+  });
+
+  $( function() {
+    var handle = $( "#mass-range" );
+    $( "#slider" ).slider({
+      min:massminmax[0],
+    max:massminmax[1],
+    value:10,
+      // create: function() {
+      //   handle.text( $( this ).slider( "value" ) );
+      // },
+      slide: function( event, ui ) {
+        handle.text( ui.value );
+        mass2 = ui.value;
+        force2 = 2500;
+        acc2 = force2/mass2;
+        duration2 = 100000/acc2;
+        massLabel.transition()
+                    .text(function(d) { return "MASS: "+ ui.value })
+        accLabel2.transition()
+                    .text(function(d) { return "ACCELERATION: "+ acc2 })
+        svgContainer2.selectAll("circle")
+           .attr("cx", svgWidth3 - 490)
+           .attr("cy", 100)
+           .attr("r", function (d) { return d; })
+           .style("fill", function(d){
+                return "rgb(240, 80, 92)";
+           });
+        }
+      });
+  } );
+
+  var graphDIV2 = d3.select('body')
+                  .append('div')
+                  .attr("class","graph2")
+  var graphSVG2 = graphDIV2.append('svg')
+                        .attr("width", 600)
+                        .attr("height", 400);
+  var xScale2 = d3.scale.linear()
+        .domain([0, 100])
+        .range([150,svgWidth2-50]);
+  var yScale2 = d3.scale.linear()
+    .domain([250,0])
+    .range([50, svgHeight2-100]);
+
+
+  var scatterX2 = d3.svg.axis().scale(xScale2).orient("bottom").ticks(5);
+  var scatterY2 = d3.svg.axis().scale(yScale2).orient("left").ticks(5);
+  graphSVG2.append('g').attr("class","axis").attr("transform","translate(0,"+(svgHeight4-100)+")").call(scatterX2);
+  graphSVG2.append("text")
+       .attr("class", "xlabel")
+       .attr('x', svgWidth4/2)
+       .attr("y", svgHeight4-50)
+       .style("text-anchor", "end")
+       .text("MASS (Kg)");
+
+  graphSVG2.append('g').attr("class","axis").attr("transform","translate("+150+",0)").call(scatterY2);
+
+  graphSVG2.append("text")
+       .attr("class", "ylabel")
+       .attr('x', -50)
+       .attr("y", svgHeight4-300)
+       .attr("transform", "rotate(-90)")
+       .style("text-anchor", "end")
+       .text("ACCELERATION");
+
+  var plotButton2= experiment2DIV.append("button")
+              .text("PLOT")
+              .attr("type","button")
+              .attr('x', svgWidth3 - 550)//your work here
+              .attr('y',(svgHeight3 -170))//your work here
+              .style("height",50)
+              .style("width",100);
+
+  plotButton2.on('click', function() {
+  graphSVG2.selectAll("circle")
+      .data(scatterPlotDataset2)
+      .enter()
+      .append("circle")
+      .attr("cx", function(d) {
+          return xScale2(d.mass);
+      })
+      .attr("cy", function(d) {
+          return yScale2(d.acc);
+      })
+      .attr("r", function(d){
+          return 7.5;
+      })
+      .attr("stroke", "black")
+      .attr("fill", function(d){
+           //return "rgb("+Math.round(colorScale2(d.mass))+",0,"+Math.round(colorScale2(d.mass))+")"
+           return "rgb(240, 80, 92)";
+      });
+  });
+
+  function answer(){
+    return "Answer is M1 and F2 with Acceleration = 100N/kg"
+  }
+  </script>
+  </div>
+  </div>
+  </div>
+</section>
+
+<section>
+  <div class="col-sm-12">
+    <div class="experiment">
+      <h1 class="myblue bold">ANALYSIS</h1>
+      <p>This time, did you anything different in how the ball's speed changed as you increased the mass?
+        Now, the ball moved slower as you increased the mass. This kind of relation between two variables is called
+        <b>"Inverse Proportion".</b> This means, as one increases, the other variable decreases.<br><br>
+        Now look at the graph, how does it look? Does it look like the graph here, a curve in the shape of a slide?
+        If it doesn't, why don't you try out a few more values of mass?
+        <img src="img/newtongraph2.jpg" alt="Acc vs Mass" title="Acc vs Mass" class="img-responsive"/><br><br>
+
+        This kind of relationship is called <b>"Reciprocal Dependency"</b>. This means as the independent variable changes,
+        the dependent variable changes by an exponential factor that depends on the value of the independent variable.
+        That means, in this case, as you move from mass 10Kg to 100Kg the change in acceleration will slow down
+        (for a constant force of 2500N)<br><br></p>
+      <h1 class="myblue bold">SUMMARY</h1>
+      <p>To summarize, Newton's second law of motion basically means that acceleration is affected by both the force exerted and
+        the mass of the object. The more force exerted, the more acceleration is produced. The more mass the object has, the
+        lesser acceleration is produced. Thus force and mass kind of balance each other.<br><br></p>
+      <p>Now lets see if you've fully understood this. If I have 2 objects of masses M1 = 50kg and M2 = 80kg and 2 forces - F1 = 1000N
+        and F2 = 5000N, which combination of M and F will produce maximum acceleration, and what would that be?<br><br></p>
+
+        <button type="button" class="answerbutton" onclick="getElementById('answer').innerHTML= answer()">Answer</button>
+        <br><p id="answer"></p>
+      <p>I know the concepts of mass and forces seem abstract, so to help you understand better here are some forces and
+        masses that occur in nature that you can relate to!<br><br></p>
+        <img src="img/mass-force.jpg" alt="Selected forces and masses" title="Selected forces and masses" class="img-responsive"/><br><br>
+  </div>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+	<meta charset="utf-8">
+    <meta name="robots" content="all,follow">
+    <meta name="googlebot" content="index,follow,snippet,archive">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Jaee Apte</title>
+
+    <meta name="keywords" content="">
+
+		<link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+	<!-- <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,100%7CRoboto:400,700,300,100' rel='stylesheet' type='text/css'> -->
+	<!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700" rel="stylesheet"> -->
+
+    <!-- Bootstrap and Font Awesome css -->
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Theme stylesheet -->
+    <link href="css/style.default.css" rel="stylesheet" id="theme-stylesheet">
+
+    <!-- CSS Animations -->
+    <link href="css/animate.css" rel="stylesheet">
+
+		<!-- owl carousel css -->
+
+		<link href="css/owl.carousel.css" rel="stylesheet">
+		<link href="css/owl.theme.css" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.png">
+
+		<!-- Colours -->
+		<link id="colours" rel="stylesheet" href="css/colour.css" />
+
+		<script>
+		var _rollbarConfig = {
+		    accessToken: "4459806324b24fe998456d1fdb5b3b06",
+		    captureUncaught: true,
+		    captureUnhandledRejections: true,
+		    payload: {
+		        environment: "production"
+		    }
+		};
+		// Rollbar Snippet
+		!function(r){function e(n){if(o[n])return o[n].exports;var t=o[n]={exports:{},id:n,loaded:!1};return r[n].call(t.exports,t,t.exports,e),t.loaded=!0,t.exports}var o={};return e.m=r,e.c=o,e.p="",e(0)}([function(r,e,o){"use strict";var n=o(1),t=o(4);_rollbarConfig=_rollbarConfig||{},_rollbarConfig.rollbarJsUrl=_rollbarConfig.rollbarJsUrl||"https://cdnjs.cloudflare.com/ajax/libs/rollbar.js/2.4.6/rollbar.min.js",_rollbarConfig.async=void 0===_rollbarConfig.async||_rollbarConfig.async;var a=n.setupShim(window,_rollbarConfig),l=t(_rollbarConfig);window.rollbar=n.Rollbar,a.loadFull(window,document,!_rollbarConfig.async,_rollbarConfig,l)},function(r,e,o){"use strict";function n(r){return function(){try{return r.apply(this,arguments)}catch(r){try{console.error("[Rollbar]: Internal error",r)}catch(r){}}}}function t(r,e){this.options=r,this._rollbarOldOnError=null;var o=s++;this.shimId=function(){return o},"undefined"!=typeof window&&window._rollbarShims&&(window._rollbarShims[o]={handler:e,messages:[]})}function a(r,e){if(r){var o=e.globalAlias||"Rollbar";if("object"==typeof r[o])return r[o];r._rollbarShims={},r._rollbarWrappedError=null;var t=new p(e);return n(function(){e.captureUncaught&&(t._rollbarOldOnError=r.onerror,i.captureUncaughtExceptions(r,t,!0),i.wrapGlobals(r,t,!0)),e.captureUnhandledRejections&&i.captureUnhandledRejections(r,t,!0);var n=e.autoInstrument;return e.enabled!==!1&&(void 0===n||n===!0||"object"==typeof n&&n.network)&&r.addEventListener&&(r.addEventListener("load",t.captureLoad.bind(t)),r.addEventListener("DOMContentLoaded",t.captureDomContentLoaded.bind(t))),r[o]=t,t})()}}function l(r){return n(function(){var e=this,o=Array.prototype.slice.call(arguments,0),n={shim:e,method:r,args:o,ts:new Date};window._rollbarShims[this.shimId()].messages.push(n)})}var i=o(2),s=0,d=o(3),c=function(r,e){return new t(r,e)},p=d.bind(null,c);t.prototype.loadFull=function(r,e,o,t,a){var l=function(){var e;if(void 0===r._rollbarDidLoad){e=new Error("rollbar.js did not load");for(var o,n,t,l,i=0;o=r._rollbarShims[i++];)for(o=o.messages||[];n=o.shift();)for(t=n.args||[],i=0;i<t.length;++i)if(l=t[i],"function"==typeof l){l(e);break}}"function"==typeof a&&a(e)},i=!1,s=e.createElement("script"),d=e.getElementsByTagName("script")[0],c=d.parentNode;s.crossOrigin="",s.src=t.rollbarJsUrl,o||(s.async=!0),s.onload=s.onreadystatechange=n(function(){if(!(i||this.readyState&&"loaded"!==this.readyState&&"complete"!==this.readyState)){s.onload=s.onreadystatechange=null;try{c.removeChild(s)}catch(r){}i=!0,l()}}),c.insertBefore(s,d)},t.prototype.wrap=function(r,e,o){try{var n;if(n="function"==typeof e?e:function(){return e||{}},"function"!=typeof r)return r;if(r._isWrap)return r;if(!r._rollbar_wrapped&&(r._rollbar_wrapped=function(){o&&"function"==typeof o&&o.apply(this,arguments);try{return r.apply(this,arguments)}catch(o){var e=o;throw e&&("string"==typeof e&&(e=new String(e)),e._rollbarContext=n()||{},e._rollbarContext._wrappedSource=r.toString(),window._rollbarWrappedError=e),e}},r._rollbar_wrapped._isWrap=!0,r.hasOwnProperty))for(var t in r)r.hasOwnProperty(t)&&(r._rollbar_wrapped[t]=r[t]);return r._rollbar_wrapped}catch(e){return r}};for(var u="log,debug,info,warn,warning,error,critical,global,configure,handleUncaughtException,handleUnhandledRejection,captureEvent,captureDomContentLoaded,captureLoad".split(","),f=0;f<u.length;++f)t.prototype[u[f]]=l(u[f]);r.exports={setupShim:a,Rollbar:p}},function(r,e){"use strict";function o(r,e,o){if(r){var t;"function"==typeof e._rollbarOldOnError?t=e._rollbarOldOnError:r.onerror&&!r.onerror.belongsToShim&&(t=r.onerror,e._rollbarOldOnError=t);var a=function(){var o=Array.prototype.slice.call(arguments,0);n(r,e,t,o)};a.belongsToShim=o,r.onerror=a}}function n(r,e,o,n){r._rollbarWrappedError&&(n[4]||(n[4]=r._rollbarWrappedError),n[5]||(n[5]=r._rollbarWrappedError._rollbarContext),r._rollbarWrappedError=null),e.handleUncaughtException.apply(e,n),o&&o.apply(r,n)}function t(r,e,o){if(r){"function"==typeof r._rollbarURH&&r._rollbarURH.belongsToShim&&r.removeEventListener("unhandledrejection",r._rollbarURH);var n=function(r){var o,n,t;try{o=r.reason}catch(r){o=void 0}try{n=r.promise}catch(r){n="[unhandledrejection] error getting `promise` from event"}try{t=r.detail,!o&&t&&(o=t.reason,n=t.promise)}catch(r){t="[unhandledrejection] error getting `detail` from event"}o||(o="[unhandledrejection] error getting `reason` from event"),e&&e.handleUnhandledRejection&&e.handleUnhandledRejection(o,n)};n.belongsToShim=o,r._rollbarURH=n,r.addEventListener("unhandledrejection",n)}}function a(r,e,o){if(r){var n,t,a="EventTarget,Window,Node,ApplicationCache,AudioTrackList,ChannelMergerNode,CryptoOperation,EventSource,FileReader,HTMLUnknownElement,IDBDatabase,IDBRequest,IDBTransaction,KeyOperation,MediaController,MessagePort,ModalWindow,Notification,SVGElementInstance,Screen,TextTrack,TextTrackCue,TextTrackList,WebSocket,WebSocketWorker,Worker,XMLHttpRequest,XMLHttpRequestEventTarget,XMLHttpRequestUpload".split(",");for(n=0;n<a.length;++n)t=a[n],r[t]&&r[t].prototype&&l(e,r[t].prototype,o)}}function l(r,e,o){if(e.hasOwnProperty&&e.hasOwnProperty("addEventListener")){for(var n=e.addEventListener;n._rollbarOldAdd&&n.belongsToShim;)n=n._rollbarOldAdd;var t=function(e,o,t){n.call(this,e,r.wrap(o),t)};t._rollbarOldAdd=n,t.belongsToShim=o,e.addEventListener=t;for(var a=e.removeEventListener;a._rollbarOldRemove&&a.belongsToShim;)a=a._rollbarOldRemove;var l=function(r,e,o){a.call(this,r,e&&e._rollbar_wrapped||e,o)};l._rollbarOldRemove=a,l.belongsToShim=o,e.removeEventListener=l}}r.exports={captureUncaughtExceptions:o,captureUnhandledRejections:t,wrapGlobals:a}},function(r,e){"use strict";function o(r,e){this.impl=r(e,this),this.options=e,n(o.prototype)}function n(r){for(var e=function(r){return function(){var e=Array.prototype.slice.call(arguments,0);if(this.impl[r])return this.impl[r].apply(this.impl,e)}},o="log,debug,info,warn,warning,error,critical,global,configure,handleUncaughtException,handleUnhandledRejection,_createItem,wrap,loadFull,shimId,captureEvent,captureDomContentLoaded,captureLoad".split(","),n=0;n<o.length;n++)r[o[n]]=e(o[n])}o.prototype._swapAndProcessMessages=function(r,e){this.impl=r(this.options);for(var o,n,t;o=e.shift();)n=o.method,t=o.args,this[n]&&"function"==typeof this[n]&&("captureDomContentLoaded"===n||"captureLoad"===n?this[n].apply(this,[t[0],o.ts]):this[n].apply(this,t));return this},r.exports=o},function(r,e){"use strict";r.exports=function(r){return function(e){if(!e&&!window._rollbarInitialized){r=r||{};for(var o,n,t=r.globalAlias||"Rollbar",a=window.rollbar,l=function(r){return new a(r)},i=0;o=window._rollbarShims[i++];)n||(n=o.handler),o.handler._swapAndProcessMessages(l,o.messages);window[t]=n,window._rollbarInitialized=!0}}}}]);
+		// End Rollbar Snippet
+		</script>
+
+		<!--Full Story script-->
+		<script>
+		window['_fs_debug'] = false;
+		window['_fs_host'] = 'fullstory.com';
+		window['_fs_org'] = 'D1SFA';
+		window['_fs_namespace'] = 'FS';
+		(function(m,n,e,t,l,o,g,y){
+		    if (e in m) {if(m.console && m.console.log) { m.console.log('FullStory namespace conflict. Please set window["_fs_namespace"].');} return;}
+		    g=m[e]=function(a,b){g.q?g.q.push([a,b]):g._api(a,b);};g.q=[];
+		    o=n.createElement(t);o.async=1;o.src='https://'+_fs_host+'/s/fs.js';
+		    y=n.getElementsByTagName(t)[0];y.parentNode.insertBefore(o,y);
+		    g.identify=function(i,v){g(l,{uid:i});if(v)g(l,v)};g.setUserVars=function(v){g(l,v)};
+		    g.shutdown=function(){g("rec",!1)};g.restart=function(){g("rec",!0)};
+		    g.consent=function(a){g("consent",!arguments.length||a)};
+		    g.identifyAccount=function(i,v){o='account';v=v||{};v.acctId=i;g(o,v)};
+		    g.clearUserCookie=function(){};
+		})(window,document,window['_fs_namespace'],'script','user');
+		</script>
+
+</head>
+
+<body data-spy="scroll" data-target="#navigation" data-offset="120">
+
+  <!--   *** NAVBAR ***
+_________________________________________________________ -->
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation" id="navbar">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand scrollTo" href="#intro">JAEE <span class="gray">APTE</span>.</a>
+            </div>
+            <div class="navbar-collapse collapse">
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#projectoverview" class="page-scroll">Work</a>
+                    </li>
+										<li><a target="_blank" href="https://www.flickr.com/photos/souls_of_the_enchanted" >Art</a>
+					                    </li>
+										<li><a href="resources/jaee-apte-resume.pdf" target="_blank">Resume</a>
+					                    </li>
+                    <li><a href="#contact" class="page-scroll">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </div>
+    <!-- /#navbar -->
+
+    <!-- *** NAVBAR END *** -->
+
+		<!-- *** INTRO IMAGE ***
+_________________________________________________________ -->
+
+	<div id="intro" class="clearfix" style="none">
+		<div class="item" style="none">
+			<div class="container">
+				<div class="aboutme">
+					<div class="col-xs-12">
+							<img src="img/main-intro.gif" class="image img-responsive" alt="This is me">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+		<!-- *** INTRO IMAGE END *** -->
+
+
+        <!-- *** UX WORK ***
+_________________________________________________________ -->
+
+        <div class="section" id="projectoverview">
+            <div class="background-container" style="background: #f3f3f3;">
+							<div class="container" style="background: #f3f3f3;">
+								<div class="col-sm-12">
+                    <div class="mb20">
+                        <h2 class="title section-begin">DESIGN WORK</h2>
+
+                        <p class="lead center-text">I’m <span class="doublebold red">Jaee</span>, a full-stack product designer on a mission to craft effective and meaningful user experiences.
+												</p>
+                    </div>
+
+                    <!-- Reference detail -->
+
+										<div class="section-begin section-end" id="references-masonry">
+
+											<div class="reference-item" data-category="interactiondesign">
+													<div class="reference">
+															<a href="rollbar.html">
+																	<img src="img/icons_rollbar.jpg" class="img-responsive" alt="" />
+
+																	<div class="overlay">
+																			<h4 class="reference-title">Product Design and Research</h4>
+																			<p class="tile">Error Monitoring and Debugging for software teams.</p>
+																	</div>
+															</a>
+													</div>
+											</div>
+
+											<div class="reference-item" data-category="interactiondesign">
+													<div class="reference">
+															<a href="visualstudio.html">
+																	<img src="img/icons_visualstudio.jpg" class="img-responsive" alt="" />
+
+																	<div class="overlay">
+																			<h4 class="reference-title">Product Design and Research</h4>
+																			<p class="tile">Enterprise SaaS products for agile teams.</p>
+																	</div>
+															</a>
+													</div>
+											</div>
+
+											<div class="reference-item" data-category="interactiondesign">
+													<div class="reference">
+															<a href="ecoach.html">
+																	<img src="img/icons_ecoach.jpg" class="img-responsive" alt="" />
+
+																	<div class="overlay">
+																			<h4 class="reference-title">Product Design and Research</h4>
+																			<p class="tile">Gameful learning experiences for students.</p>
+																	</div>
+															</a>
+													</div>
+											</div>
+
+												<!--	<div class="reference-item" data-category="interactiondesign">
+															<div class="reference">
+																	<a href="xplor.html">
+																			<img src="img/icons_xplor.jpg" class="img-responsive" alt="" />
+
+																			<div class="overlay">
+																					<h4 class="reference-title">Interaction Design</h4>
+																					<p class="tile">Simplifying group travel planning.</p>
+																			</div>
+																	</a>
+															</div>
+													</div>-->
+
+													<div class="reference-item" data-category="interactiondesign">
+															<div class="reference">
+																	<a href="thriftyme.html">
+																			<img src="img/icons_thriftyme.jpg" class="img-responsive" alt="" />
+
+																			<div class="overlay">
+																					<h4 class="reference-title">Interaction Design</h4>
+																					<p class="tile">Hassle-free marketplace mobile app.</p>
+																			</div>
+																	</a>
+															</div>
+													</div>
+
+													<!-- <div class="reference-item" data-category="interactiondesign">
+					                    <div class="reference">
+					                        <a href="problemroulette.html">
+					                            <img src="img/icons_pr.jpg" class="img-responsive" alt="" />
+
+					                            <div class="overlay">
+					                                <h3 class="reference-title">Problem Roulette</h3>
+					                                <p>UX Researcher</p>
+					                            </div>
+					                        </a>
+					                    </div>
+					                </div> -->
+
+										</div>
+										<!-- /#references-masonry -->
+
+										<div class="mb20">
+												<h2 class="title section-begin">AND EVERYTHING ELSE</h2>
+
+												<p class="lead center-text">These are some curious projects that are sometimes related, sometimes unrelated to my work.</p>
+											</div>
+
+										<div class="section-begin section-end" id="references-masonry-other">
+
+											<div class="reference-item" data-category="interactiondesign">
+													<div class="reference">
+															<a href="infoviz.html">
+																	<img src="img/icons_infoviz.jpg" class="img-responsive" alt="" />
+
+																	<div class="overlay">
+																			<h4 class="reference-title">Data Visualization</h4>
+																			<p class="tile">Designing unconventional data visualizations.</p>
+																	</div>
+															</a>
+													</div>
+											</div>
+
+											<div class="reference-item" data-category="interactiondesign">
+													<div class="reference">
+															<a href="kinectripple.html">
+																	<img src="img/icons_ripple.jpg" class="img-responsive" alt="" />
+
+																	<div class="overlay">
+																			<h4 class="reference-title">Software Development</h4>
+																			<p class="tile">Gesture-based infotainment system with Microsoft Kinect.</p>
+																	</div>
+															</a>
+													</div>
+											</div>
+
+											<div class="reference-item" data-category="graphicdesign">
+													<div class="reference">
+															<a href="alphabetposter.html">
+																	<img src="img/icons_alphabet.jpg" class="img-responsive" alt="" />
+
+																	<div class="overlay">
+																			<h4 class="reference-title">Graphic Design</h4>
+																			<p class="tile">A mixology-themed alphabet poster.</p>
+																	</div>
+															</a>
+													</div>
+											</div>
+
+											<div class="reference-item" data-category="other">
+													<div class="reference">
+															<a href="https://www.flickr.com/photos/souls_of_the_enchanted" target="_blank">
+																	<img src="img/icons_art.jpg" class="img-responsive" alt="" />
+
+																	<div class="overlay">
+																			<h4 class="reference-title">Mixed Media Artist</h4>
+																			<p class="tile">Gallery of my artworks spanning over a period of 15 years.</p>
+																	</div>
+															</a>
+													</div>
+											</div>
+
+										</div>
+										<!-- /#references-masonry -->
+
+										<!-- <div class="more-juice section-begin section-end"></div>
+										<div class="section-end mb20">
+												<p>I also indulge in occasional cubing.</p>
+										</div> -->
+									</div>
+									<!-- /.12 -->
+							</div>
+							<!-- /.container -->
+						</div> <!--background-container-->
+					</div>
+					<!-- /.section -->
+
+<!--__________________end other work____________________-->
+
+
+				<!-- *** CONTACT ***
+_________________________________________________________ -->
+        <div class="section contact" id="contact">
+            <div class="container">
+                <div class="col-sm-12">
+									<div class="mb20">
+                    <h2 class="title">Contact me</h2>
+									</div><!--mb20-->
+                    <div class="col-lg-10 col-lg-offset-1">
+											<p class="center-text"><a href="resources/jaee-apte-resume.pdf" target="_blank" class="btn btn-blue"><span class = "white">Resume</span></a><br><br></p>
+											<h4>I'm a Product Designer at <a href="https://rollbar.com" target="_blank">Rollbar</a>. I enjoy breaking down complex problems to create practical,
+												meaningful and seamless user experiences.</h4>
+										</div>
+										<div class="col-lg-10 col-lg-offset-1">
+											<h4>I live in pretty San Francisco and I'm always down for a cup of tea! <a href="mailto:jaee.apte@gmail.com">Email</a>, <a href="https://www.linkedin.com/in/jaeeapte" target="_blank">LinkedIn</a>, and <a href="https://www.flickr.com/photos/souls_of_the_enchanted" target="_blank">Flickr.</a></h4>
+										</div><!-- /.col-lg-8 -->
+								</div><!--col-md-12-->
+            	</div><!-- /.container -->
+        </div><!-- /.section -->
+
+        <!-- *** CONTACT END *** -->
+
+        <!-- *** FOOTER ***
+_________________________________________________________ -->
+
+        <div class="section" id="footer">
+            <div class="container">
+				<div class="row col-md-6 col-md-offset-3">
+					<p class="template-bootstrapious"><span class="white">&copy; 2020 Jaee Apte. All rights reserved.</span></p>
+                </div>
+            </div>
+            <!-- /.container -->
+        </div>
+        <!-- /.section -->
+
+        <!-- *** FOOTER END *** -->
+
+    <!-- #### JAVASCRIPT FILES ### -->
+
+    <!-- js base -->
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+		<!-- Mordernizr -->
+		<script src="js/modernizr-2.6.2.min.js"></script>
+
+		<script src="js/jquery-1.11.0.min.js"></script>
+	<!-- main -->
+    <!-- <script src="js/main.js"></script> -->
+
+    <!-- for demo purpose -->
+    <script src="js/jquery.cookie.js"></script>
+
+    <!-- waypoints for scroll spy -->
+    <script src="js/waypoints.min.js"></script>
+
+    <!-- maps -->
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
+    <script src="js/gmaps.js"></script> -->
+
+    <!-- masonry layout -->
+    <script src="js/masonry.pkgd.min.js"></script>
+
+    <!-- owl carousel -->
+    <script src="js/owl.carousel.min.js"></script>
+
+	<!-- smooth scroll to -->
+    <script src="js/smoothscroll.js"></script>
+
+    <!-- jQuery counter -->
+    <script src="js/jquery.counterup.min.js"></script>
+
+    <!-- jQuery parallax -->
+    <script src="js/jquery.parallax-1.1.3.js"></script>
+
+    <!-- main js file -->
+
+    <script src="js/front.js"></script>
+		<!-- Google Analytics -->
+    <script src="js/analytics.js"></script>
+
+	<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script> -->
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+
+	<script type="text/javascript">
+		$(window).load(function() {
+			// Animate loader off screen
+			$(".loader").fadeOut("slow");;
+		});
+	</script>
+</body>
+
+</html>
