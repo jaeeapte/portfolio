@@ -1,16 +1,19 @@
+<!DOCTYPE html>
 <html>
 <HEAD>
+
   <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
   <link href='https://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,100%7CRoboto:400,700,300,100' rel='stylesheet' type='text/css'>
-<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
-<link href="css/jqueryui1.12.1.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" type="text/css" href="css/newtonstyle.css">
+  <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,100%7CRoboto:400,700,300,100' rel='stylesheet' type='text/css'>
+  <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="css/jqueryui1.12.1.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" href="css/newtonstyle.css">
 
+  <!-- d3 -->
 
-<script src="https://d3js.org/d3.v3.min.js"></script>
-<script
+  <script src="https://d3js.org/d3.v3.min.js"></script>
+  <script
   src="https://code.jquery.com/jquery-3.1.1.min.js"
   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
   crossorigin="anonymous"></script>
@@ -32,9 +35,9 @@
   <link href="css/animate.css" rel="stylesheet">
 
   <!-- owl carousel css -->
-
   <link href="css/owl.carousel.css" rel="stylesheet">
   <link href="css/owl.theme.css" rel="stylesheet">
+
   <!-- Favicon -->
   <link rel="shortcut icon" href="favicon.png">
 
@@ -55,7 +58,7 @@
   		!function(r){var e={};function o(n){if(e[n])return e[n].exports;var t=e[n]={i:n,l:!1,exports:{}};return r[n].call(t.exports,t,t.exports,o),t.l=!0,t.exports}o.m=r,o.c=e,o.d=function(r,e,n){o.o(r,e)||Object.defineProperty(r,e,{enumerable:!0,get:n})},o.r=function(r){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(r,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(r,"__esModule",{value:!0})},o.t=function(r,e){if(1&e&&(r=o(r)),8&e)return r;if(4&e&&"object"==typeof r&&r&&r.__esModule)return r;var n=Object.create(null);if(o.r(n),Object.defineProperty(n,"default",{enumerable:!0,value:r}),2&e&&"string"!=typeof r)for(var t in r)o.d(n,t,function(e){return r[e]}.bind(null,t));return n},o.n=function(r){var e=r&&r.__esModule?function(){return r.default}:function(){return r};return o.d(e,"a",e),e},o.o=function(r,e){return Object.prototype.hasOwnProperty.call(r,e)},o.p="",o(o.s=0)}([function(r,e,o){"use strict";var n=o(1),t=o(4);_rollbarConfig=_rollbarConfig||{},_rollbarConfig.rollbarJsUrl=_rollbarConfig.rollbarJsUrl||"https://cdn.rollbar.com/rollbarjs/refs/tags/v2.16.2/rollbar.min.js",_rollbarConfig.async=void 0===_rollbarConfig.async||_rollbarConfig.async;var a=n.setupShim(window,_rollbarConfig),l=t(_rollbarConfig);window.rollbar=n.Rollbar,a.loadFull(window,document,!_rollbarConfig.async,_rollbarConfig,l)},function(r,e,o){"use strict";var n=o(2);function t(r){return function(){try{return r.apply(this,arguments)}catch(r){try{console.error("[Rollbar]: Internal error",r)}catch(r){}}}}var a=0;function l(r,e){this.options=r,this._rollbarOldOnError=null;var o=a++;this.shimId=function(){return o},"undefined"!=typeof window&&window._rollbarShims&&(window._rollbarShims[o]={handler:e,messages:[]})}var i=o(3),s=function(r,e){return new l(r,e)},d=function(r){return new i(s,r)};function c(r){return t((function(){var e=this,o=Array.prototype.slice.call(arguments,0),n={shim:e,method:r,args:o,ts:new Date};window._rollbarShims[this.shimId()].messages.push(n)}))}l.prototype.loadFull=function(r,e,o,n,a){var l=!1,i=e.createElement("script"),s=e.getElementsByTagName("script")[0],d=s.parentNode;i.crossOrigin="",i.src=n.rollbarJsUrl,o||(i.async=!0),i.onload=i.onreadystatechange=t((function(){if(!(l||this.readyState&&"loaded"!==this.readyState&&"complete"!==this.readyState)){i.onload=i.onreadystatechange=null;try{d.removeChild(i)}catch(r){}l=!0,function(){var e;if(void 0===r._rollbarDidLoad){e=new Error("rollbar.js did not load");for(var o,n,t,l,i=0;o=r._rollbarShims[i++];)for(o=o.messages||[];n=o.shift();)for(t=n.args||[],i=0;i<t.length;++i)if("function"==typeof(l=t[i])){l(e);break}}"function"==typeof a&&a(e)}()}})),d.insertBefore(i,s)},l.prototype.wrap=function(r,e,o){try{var n;if(n="function"==typeof e?e:function(){return e||{}},"function"!=typeof r)return r;if(r._isWrap)return r;if(!r._rollbar_wrapped&&(r._rollbar_wrapped=function(){o&&"function"==typeof o&&o.apply(this,arguments);try{return r.apply(this,arguments)}catch(o){var e=o;throw e&&("string"==typeof e&&(e=new String(e)),e._rollbarContext=n()||{},e._rollbarContext._wrappedSource=r.toString(),window._rollbarWrappedError=e),e}},r._rollbar_wrapped._isWrap=!0,r.hasOwnProperty))for(var t in r)r.hasOwnProperty(t)&&(r._rollbar_wrapped[t]=r[t]);return r._rollbar_wrapped}catch(e){return r}};for(var u="log,debug,info,warn,warning,error,critical,global,configure,handleUncaughtException,handleAnonymousErrors,handleUnhandledRejection,captureEvent,captureDomContentLoaded,captureLoad".split(","),p=0;p<u.length;++p)l.prototype[u[p]]=c(u[p]);r.exports={setupShim:function(r,e){if(r){var o=e.globalAlias||"Rollbar";if("object"==typeof r[o])return r[o];r._rollbarShims={},r._rollbarWrappedError=null;var a=new d(e);return t((function(){e.captureUncaught&&(a._rollbarOldOnError=r.onerror,n.captureUncaughtExceptions(r,a,!0),e.wrapGlobalEventHandlers&&n.wrapGlobals(r,a,!0)),e.captureUnhandledRejections&&n.captureUnhandledRejections(r,a,!0);var t=e.autoInstrument;return!1!==e.enabled&&(void 0===t||!0===t||"object"==typeof t&&t.network)&&r.addEventListener&&(r.addEventListener("load",a.captureLoad.bind(a)),r.addEventListener("DOMContentLoaded",a.captureDomContentLoaded.bind(a))),r[o]=a,a}))()}},Rollbar:d}},function(r,e,o){"use strict";function n(r,e,o,n){r._rollbarWrappedError&&(n[4]||(n[4]=r._rollbarWrappedError),n[5]||(n[5]=r._rollbarWrappedError._rollbarContext),r._rollbarWrappedError=null);var t=e.handleUncaughtException.apply(e,n);o&&o.apply(r,n),"anonymous"===t&&(e.anonymousErrorsPending+=1)}function t(r,e,o){if(e.hasOwnProperty&&e.hasOwnProperty("addEventListener")){for(var n=e.addEventListener;n._rollbarOldAdd&&n.belongsToShim;)n=n._rollbarOldAdd;var t=function(e,o,t){n.call(this,e,r.wrap(o),t)};t._rollbarOldAdd=n,t.belongsToShim=o,e.addEventListener=t;for(var a=e.removeEventListener;a._rollbarOldRemove&&a.belongsToShim;)a=a._rollbarOldRemove;var l=function(r,e,o){a.call(this,r,e&&e._rollbar_wrapped||e,o)};l._rollbarOldRemove=a,l.belongsToShim=o,e.removeEventListener=l}}r.exports={captureUncaughtExceptions:function(r,e,o){if(r){var t;if("function"==typeof e._rollbarOldOnError)t=e._rollbarOldOnError;else if(r.onerror){for(t=r.onerror;t._rollbarOldOnError;)t=t._rollbarOldOnError;e._rollbarOldOnError=t}e.handleAnonymousErrors();var a=function(){var o=Array.prototype.slice.call(arguments,0);n(r,e,t,o)};o&&(a._rollbarOldOnError=t),r.onerror=a}},captureUnhandledRejections:function(r,e,o){if(r){"function"==typeof r._rollbarURH&&r._rollbarURH.belongsToShim&&r.removeEventListener("unhandledrejection",r._rollbarURH);var n=function(r){var o,n,t;try{o=r.reason}catch(r){o=void 0}try{n=r.promise}catch(r){n="[unhandledrejection] error getting `promise` from event"}try{t=r.detail,!o&&t&&(o=t.reason,n=t.promise)}catch(r){}o||(o="[unhandledrejection] error getting `reason` from event"),e&&e.handleUnhandledRejection&&e.handleUnhandledRejection(o,n)};n.belongsToShim=o,r._rollbarURH=n,r.addEventListener("unhandledrejection",n)}},wrapGlobals:function(r,e,o){if(r){var n,a,l="EventTarget,Window,Node,ApplicationCache,AudioTrackList,ChannelMergerNode,CryptoOperation,EventSource,FileReader,HTMLUnknownElement,IDBDatabase,IDBRequest,IDBTransaction,KeyOperation,MediaController,MessagePort,ModalWindow,Notification,SVGElementInstance,Screen,TextTrack,TextTrackCue,TextTrackList,WebSocket,WebSocketWorker,Worker,XMLHttpRequest,XMLHttpRequestEventTarget,XMLHttpRequestUpload".split(",");for(n=0;n<l.length;++n)r[a=l[n]]&&r[a].prototype&&t(e,r[a].prototype,o)}}}},function(r,e,o){"use strict";function n(r,e){this.impl=r(e,this),this.options=e,function(r){for(var e=function(r){return function(){var e=Array.prototype.slice.call(arguments,0);if(this.impl[r])return this.impl[r].apply(this.impl,e)}},o="log,debug,info,warn,warning,error,critical,global,configure,handleUncaughtException,handleAnonymousErrors,handleUnhandledRejection,_createItem,wrap,loadFull,shimId,captureEvent,captureDomContentLoaded,captureLoad".split(","),n=0;n<o.length;n++)r[o[n]]=e(o[n])}(n.prototype)}n.prototype._swapAndProcessMessages=function(r,e){var o,n,t;for(this.impl=r(this.options);o=e.shift();)n=o.method,t=o.args,this[n]&&"function"==typeof this[n]&&("captureDomContentLoaded"===n||"captureLoad"===n?this[n].apply(this,[t[0],o.ts]):this[n].apply(this,t));return this},r.exports=n},function(r,e,o){"use strict";r.exports=function(r){return function(e){if(!e&&!window._rollbarInitialized){for(var o,n,t=(r=r||{}).globalAlias||"Rollbar",a=window.rollbar,l=function(r){return new a(r)},i=0;o=window._rollbarShims[i++];)n||(n=o.handler),o.handler._swapAndProcessMessages(l,o.messages);window[t]=n,window._rollbarInitialized=!0}}}}]);
   		// End Rollbar Snippet
   		</script>
-      
+
   <!--Full Story script-->
   <script>
   window['_fs_debug'] = false;
@@ -73,11 +76,12 @@
       g.identifyAccount=function(i,v){o='account';v=v||{};v.acctId=i;g(o,v)};
       g.clearUserCookie=function(){};
   })(window,document,window['_fs_namespace'],'script','user');
+  // End FullStory Snippet
   </script>
 
 </HEAD>
 
-<body>
+<body data-spy="scroll" data-target="#navigation" data-offset="120">
 
   <!-- *** NAVBAR ***
   _________________________________________________________ -->
@@ -106,128 +110,151 @@
                     <li><a href="index.html#contact" class="page-scroll">Contact</a>
                     </li>
                 </ul>
-
-
-            <!-- <ul class="nav navbar-nav navbar-left">
-                        <li><a href="ecoach.html">Previous</a>
-                        </li>
-              <li><a href="xplor.html">Next</a>
-                        </li>
-            </ul> -->
               </div>
               <!--/.nav-collapse -->
 
           </div>
-      </div>
+  </div>
       <!-- /#navbar -->
 
       <!-- *** NAVBAR END *** -->
 
+  <div class="section" id="projects">
+    <div class="container">
+      <div class="mb20">
+        <h2 class="title section-begin">Newton's Second Law of Motion</h2>
+      </div>
 
-<section>
-
-  <div class="col-sm-12">
-    <div class="description">
-        <h1>Newton's Second Law of Motion</h1>
+      <div class="col-sm-12">
+        <div class="description">
 				The acceleration of an object as produced by a net force is directly proportional to the magnitude of the net force, in the same direction as the net force, and inversely proportional to the mass of the object.
-        <!-- <br><img src="images/firstlaw.jpg" alt="The Poster" title="The Poster" class="img-responsive"/><br><br> -->
-        <br><div class="formula">F = m * a</div>
+        <br><h1>F = m * a</h1>
 				<div class="sidenote"><b>F:</b> force exerted,<br>
           <b>m: </b> mass of the object, <br>
           <b>a: </b>acceleration produced as a result.<br><br>
           Acceleration is simply the rate of change of velocity, that means by 'how much' will the velocity of the object increase or decrease per unit time.</div>
-        <h1 class="myblue bold">EXPERIMENT 1</h1>
-        <div class="sidenote">To understand this law, we will examine the effect of force and mass on acceleration individually. First, lets keep a constant mass of 100kg and vary the force.</div>
-        <br><h3>MASS = 10Kg</h3>
+        </div>
+      </div>
     </div>
   </div>
-</section>
 
-<section>
-  <div class="experiment" id="experiment1">
-  <div class="col-sm-12">
-    <p>Move the slider to assign a new value to force and click on <b>"ROLL"</b>. Try this with 2-3 different values of force, then click on <b>"PLOT"</b></p>
+<div class="container">
+<div class="col-sm-12">
+    <h3><span class = "myblue bold">EXPERIMENT 1</span></h3>
+    <!-- <h1 class="myblue bold">EXPERIMENT 1</h1> -->
+    <div class="sidenote">To understand this law, we will examine the effect of force and mass on acceleration individually. First, lets keep a constant mass of 10kg and vary the force.</div>
+    <p>Move the slider to assign a new value to force and click on <b>"ROLL"</b>. Try this with 2-3 different values of force, then observe the graph.</p>
+
+    <!-- <h3>MASS IS CONSTANT = 10Kg</h3><br> -->
+    <h3>Move the slider to choose a 'Force' value and click on 'Roll'</h3><br>
     <div class="col-sm-6">
       <div id="slider1">
         <div id="force-range" class="ui-slider-handle"></div>
       </div>
+      <br>
       <label class="labelmin">500N</label> <label class="labelmax">2500N</label><br>
-
+    </div>
+</div>
 <script type="text/javascript">
 
-// add the tooltip area to the webpage
-// var tooltip = d3.select("body").append("div")
-//     .attr("class", "tooltip")
-//     .style("opacity", 0);
-
-var svgHeight1 = 200;
-var svgWidth1 = 600;
-var svgHeight2 = 400;
+var svgWidth1 = 500;
+var svgHeight1 = 350;
 var svgWidth2 = 600;
+var svgHeight2 = 350;
 var forceminmax = [500,2500];
 var circleRadii = [40];
+
+//Constants
+var masslabel_x = 0;
+var masslabel_y = 20;
+var forcelabel_x = 0;
+var forcelabel_y = masslabel_y + 30;
+var acclabel_x = forcelabel_x + 150;
+var acclabel_y = masslabel_y + 30;
+
+var box_x = 0;
+var box_y = 100;
+var box_width = svgWidth1;
+var box_height = circleRadii * 2.5;
+var circle_x = circleRadii;
+var circle_y = box_y + box_height/2;
+
 var force = 500;	//scale: 500(default), 1000, 1500, 2000
 var mass = 10;	//scale: 20,40,60,80,100(default)
 var acc = 50;
 var duration = 5000;
 var scatterPlotDataset = [];
 var colorScale = d3.scale.linear().domain(forceminmax).range([0,255]);
-var experiment1DIV = d3.select('body')
+var buttonContainerDIV = d3.select('body')
                     .append('div')
-                  .attr("class","experiment1DIV");
-var mainDIV = d3.select('body')
-                 .append('div')
-                  .attr("class","mainDIV")
+                    .attr("class","container","class","col-sm-12")
+                    .append('div')
+                    .attr("class","col-sm-12 top-margin-30 bottom-margin-30");
 
-var svgContainer = mainDIV.append('svg')
-                                   .attr("width", 600)
-                                   .attr("height", 350);
+var intractiveContainerDIV = d3.select('body')
+                 .append('div')
+                 .attr("class","container")
+                 .append('div')
+                 .attr("class","col-sm-12 top-margin-30 bottom-margin-30");
+
+var svgContainer = intractiveContainerDIV.append('svg')
+                                   .attr("width", svgWidth1)
+                                   .attr("height", svgHeight1);
+
 var circles = svgContainer.selectAll("circle")
                          .data(circleRadii)
                          .enter()
                          .append('circle');
 var box = svgContainer.append('rect')
-                         .attr('x', svgWidth1 - 530)
-                         .attr('y', svgHeight1 - 100)
-                           .attr("width", svgWidth1-70)
-                           .attr("height", circleRadii * 2.5)
+                         .attr('x', box_x)
+                         .attr('y', box_y)
+                           .attr("width", box_width)
+                           .attr("height", box_height)
                            .style("fill", "none")
                            .style("stroke", "black");
 var circleAttributes = circles
-                   .attr('cx', svgWidth1 - 490)
-                   .attr('cy', svgHeight1 - 50)
+                   .attr('cx', circle_x)
+                   .attr('cy', circle_y)
                    .attr('r', function (d) { return d; })
                    .style("fill", function(d){
                         return "rgb(240, 80, 92)";
                    });
 
-var rollButton= experiment1DIV.append("button")
-            .text("ROLL")
+var rollButton= buttonContainerDIV.append("button")
+            .text("Roll the ball")
             .attr("type","button")
-            .attr('x', svgWidth1 - 550)//your work here
+            .attr("class", "btn btn-blue")
+            .attr('x', svgWidth1 - svgWidth1)//your work here
             .attr('y', svgHeight1 - 170)//your work here
             .style("height",50)
             .style("width",100);
 
+var massLabel = svgContainer.append('text')
+                            .text("CONSTANT MASS: 10Kg")
+                            .attr('x', masslabel_x)
+                            .attr('y', masslabel_y)
+                            .attr("font-family","Lato")
+                            .attr("font-size","16pt");
+
 var forceLabel = svgContainer.append('text')
                             .text(function(d) { return "FORCE: "+ force })
-                            .attr('x', svgWidth1 - 530)//your work here
-                            .attr('y', svgHeight1 - 170)//your work here
+                            .attr('x', forcelabel_x)
+                            .attr('y', forcelabel_y)
                             .attr("font-family","Lato")
-                            .attr("font-size","18pt");
+                            .attr("font-size","16pt");
 
 var accLabel = svgContainer.append('text')
                             .text(function(d) { return "ACCELERATION: "+ acc })
-                            .attr('x', svgWidth1 - 250)//your work here
-                            .attr('y', svgHeight1 -170)//your work here
+                            .attr('x', acclabel_x)
+                            .attr('y', acclabel_y)
                             .attr("font-family","Lato")
-                            .attr("font-size","18pt");
+                            .attr("font-size","16pt");
 rollButton.on('click', function() {
 svgContainer.selectAll("circle")
   .transition()
   .duration(duration)
-  .attr("cx", svgWidth1 - circleRadii)
-  .attr("cy", svgHeight1 - 50)
+  .attr("cx", box_width - circleRadii)
+  .attr("cy", circle_y)
   .attr("r", function (d) { return d; })
   .ease("exp-in");
 
@@ -235,7 +262,26 @@ scatterPlotDataset.push({
   "force":   force,
   "mass": mass,
   "acc": acc
-});
+  });
+
+graphSVG.selectAll("circle")
+    .data(scatterPlotDataset)
+    .enter()
+    .append("circle")
+    .attr("cx", function(d) {
+        return xScale(d.force);
+    })
+    .attr("cy", function(d) {
+        return yScale(d.acc);
+    })
+    .attr("r", function(d){
+        return 7.5;
+    })
+    .attr("stroke", "black")
+    .attr("fill", function(d){
+         //return "rgb("+Math.round(colorScale(d.force))+",0,"+Math.round(colorScale(d.force))+")"
+         return "rgb(240, 80, 92)";
+    });
 });
 
 $( function() {
@@ -254,8 +300,8 @@ $( function() {
       accLabel.transition()
                   .text(function(d) { return "ACCELERATION: "+ acc })
       svgContainer.selectAll("circle")
-         .attr("cx", svgWidth1 - 490)
-         .attr("cy", svgHeight1 - 50)
+         .attr("cx", circle_x)
+         .attr("cy", circle_y)
          .attr("r", function (d) { return d; })
          .style("fill", function(d){
               return "rgb(240, 80, 92)";
@@ -264,10 +310,8 @@ $( function() {
     });
 } );
 
-var graphDIV = d3.select('body')
-                .append('div')
-                .attr("class","graph1")
-var graphSVG = graphDIV.append('svg')
+
+var graphSVG = intractiveContainerDIV.append('svg')
                       .attr("width", 600)
                       .attr("height", 400);
 var xScale = d3.scale.linear()
@@ -298,83 +342,97 @@ graphSVG.append("text")
      .style("text-anchor", "end")
      .text("ACCELERATION");
 
-var plotButton= experiment1DIV.append("button")
-            .text("PLOT")
-            .attr("type","button")
-            .attr('x', svgWidth1 - 550)//your work here
-            .attr('y',(svgHeight1 -170))//your work here
-            .style("height",50)
-            .style("width",100);
+// var plotButton= containerDIV.append("button")
+//             .text("PLOT")
+//             .attr("type","button")
+//             .attr('x', svgWidth1 - 550)//your work here
+//             .attr('y',(svgHeight1 -170))//your work here
+//             .style("height",50)
+//             .style("width",100);
 
-plotButton.on('click', function() {
-graphSVG.selectAll("circle")
-    .data(scatterPlotDataset)
-    .enter()
-    .append("circle")
-    .attr("cx", function(d) {
-        return xScale(d.force);
-    })
-    .attr("cy", function(d) {
-        return yScale(d.acc);
-    })
-    .attr("r", function(d){
-        return 7.5;
-    })
-    .attr("stroke", "black")
-    .attr("fill", function(d){
-         //return "rgb("+Math.round(colorScale(d.force))+",0,"+Math.round(colorScale(d.force))+")"
-         return "rgb(240, 80, 92)";
-    });
-});
+// plotButton.on('click', function() {
+// graphSVG.selectAll("circle")
+//     .data(scatterPlotDataset)
+//     .enter()
+//     .append("circle")
+//     .attr("cx", function(d) {
+//         return xScale(d.force);
+//     })
+//     .attr("cy", function(d) {
+//         return yScale(d.acc);
+//     })
+//     .attr("r", function(d){
+//         return 7.5;
+//     })
+//     .attr("stroke", "black")
+//     .attr("fill", function(d){
+//          //return "rgb("+Math.round(colorScale(d.force))+",0,"+Math.round(colorScale(d.force))+")"
+//          return "rgb(240, 80, 92)";
+//     });
+// });
+
 </script>
 </div>
-</div>
-</div>
-</section>
 
-<section>
+
+<div class="container">
   <div class="col-sm-12">
-    <div class="experiment">
-      <h1 class="myblue bold">ANALYSIS</h1>
+      <h3><span class = "myblue bold">ANALYSIS</span></h3>
       <p>Did you notice the change in the ball's speed as you increased the force? If you notice that the ball moved faster,
         then you're right! This kind of relation between two variables is called <b>"Direct Proportion".</b>
         This means, as one increases, the other variable also increases.<br><br> Now look at the graph, how does it look?
         Does it look like the graph here, a straight line at an angle of about 45 degrees? If it doesn't, why don't you try
         out a few more values of force?
-        <img src="img/newtongraph1.JPG" alt="Acc vs Force" title="Acc vs Force" class="img-responsive"/><br><br>
+        <img class="myImg img-boxshadow img-responsive" src="img/newtongraph1.JPG" alt="Acc vs Force"/>
+        <p class="img-caption">Linear Dependency Graph </p>
 
-        This kind of relationship is called
-        <b>"Linear Dependency"</b>. This means as one variable increases, the other by the same factor irrepective
+        This kind of relationship is called <b>"Linear Dependency"</b>. This means as one variable increases, the other by the same factor irrepective
         of the value of either variable. That means, in this case, whether force is 500N or 2500N,
         acceleration will increase by same factor of 0.1 (for a constant mass of 10Kg)<br><br></p>
 
-      <h1 class="myblue bold">EXPERIMENT 2</h1>
+
+        <div class="sidenote">To understand this law, we will examine the effect of force and mass on acceleration individually. First, lets keep a constant mass of 10kg and vary the force.</div>
+        <p>Move the slider to assign a new value to force and click on <b>"ROLL"</b>. Try this with 2-3 different values of force, then observe the graph.</p>
+  </div>
+</div>
+
+<div class="container">
+  <div class="col-sm-12 top-margin-60">
+      <h3><span class = "myblue bold top-margin-60">EXPERIMENT 2</span></h3>
       <div class="sidenote">Now, lets keep a constant force of 2500N and vary the mass.
-      <br><h3>FORCE = 2500N</h3><br></div>
-      <p>Move the slider to assign a new value to mass and click on <b>"ROLL".</b> Try this with 2-3 different values of mass, then click on <b>"PLOT"</b>.</p>
+      <p>Move the slider to assign a new value to mass and click on <b>"ROLL".</b> Try this with 2-3 different values of mass, then observe the graph.</p>
+      <h3>Move the slider to choose a 'Mass' value and click on 'Roll'</h3><br>
       <div class="col-sm-6">
-        <!-- <input type="range" id="rangeMass" value="20" min="20" max="100"> -->
         <div id="slider">
           <div id="mass-range" class="ui-slider-handle"></div>
         </div>
-        <label class="labelmin">10Kg</label> <label class="labelmax">100Kg</label>
+        <br>
+        <label class="labelmin">10Kg</label> <label class="labelmax">100Kg</label><br>
       </div>
-    </div>
   </div>
-</section>
-<section>
+
   <script type="text/javascript">
 
-  // add the tooltip area to the webpage
-  // var tooltip = d3.select("body").append("div")
-  //     .attr("class", "tooltip")
-  //     .style("opacity", 0);
-
-  var svgHeight3 = 200;
-  var svgWidth3 = 600;
-  var svgHeight4 = 400;
+  var svgWidth3 = 500;
+  var svgHeight3 = 350;
   var svgWidth4 = 600;
+  var svgHeight4 = 350;
   var massminmax = [10,100];
+
+  //Constants
+  var forcelabel_x2 = 0;
+  var forcelabel_y2 = 20;
+  var masslabel_x2 = 0;
+  var masslabel_y2 = forcelabel_y2 + 30;
+  var acclabel_x2 = masslabel_x2 + 150;
+  var acclabel_y2 = forcelabel_y2 + 30;
+
+  var box_x2 = 0;
+  var box_y2 = 100;
+  var box_width2 = svgWidth3;
+  var box_height2 = circleRadii * 2.5;
+  var circle_x2 = circleRadii;
+  var circle_y2 = box_y + box_height/2;
 
   var force2 = 2500;
   var mass2 = 10;	//scale: 20,40,60,80,100(default)
@@ -383,71 +441,106 @@ graphSVG.selectAll("circle")
   var scatterPlotDataset2 = [];
   var colorScale2 = d3.scale.linear().domain(massminmax).range([0,255]);
 
-  var experiment2DIV = d3.select('body')
+  var buttonContainer2DIV = d3.select('body')
                       .append('div')
-                    .attr("class","experiment2DIV")
-  var mainDIV2 = d3.select('body')
+                      .attr("class","container","class","col-sm-12")
+                      .append('div')
+                      .attr("class","col-sm-12 top-margin-30 bottom-margin-30");
+
+  var intractiveContainer2DIV = d3.select('body')
                    .append('div')
-                    .attr("class","mainDIV2")
-  var svgContainer2 = mainDIV2.append('svg')
-                                     .attr("width", 600)
-                                     .attr("height", 200)
-                                     .style("float","left");
+                   .attr("class","container")
+                   .append('div')
+                   .attr("class","col-sm-12 top-margin-30 bottom-margin-30");
+
+  var svgContainer2 = intractiveContainer2DIV.append('svg')
+                                     .attr("width", svgWidth3)
+                                     .attr("height", svgHeight3);
+
   var circles2 = svgContainer2.selectAll("circle")
                            .data(circleRadii)
                            .enter()
                            .append('circle');
+
   var box2 = svgContainer2.append('rect')
-                           .attr('x', svgWidth3 - 530)
-                           .attr('y', 50)
-                             .attr("width", svgWidth3-70)
-                             .attr("height", circleRadii * 2.5)
+                           .attr('x', box_x2)
+                           .attr('y', box_y2)
+                             .attr("width", box_width2)
+                             .attr("height", box_height2)
                              .style("fill", "none")
                              .style("stroke", "black");
+
   var circleAttributes2 = circles2
-                     .attr('cx', svgWidth3 - 490)
-                     .attr('cy', 100)
+                     .attr('cx', circle_x2)
+                     .attr('cy', circle_y2)
                      .attr('r', function (d) { return d; })
                      .style("fill", function(d){
                           return "rgb(240, 80, 92)";
                      });
 
-  var rollButton2= experiment2DIV.append("button")
-              .text("ROLL")
+  var rollButton2= buttonContainer2DIV.append("button")
+              .text("Roll the ball")
               .attr("type","button")
-              .attr('x', svgWidth3 - 550)//your work here
-              .attr('y',(svgHeight3 -170))//your work here
+              .attr("class", "btn btn-blue")
+              .attr('x', svgWidth3 - svgWidth3)//your work here
+              .attr('y',(svgHeight3 - 170))//your work here
               .style("height",50)
               .style("width",100);
 
-  var massLabel = svgContainer2.append('text')
-                              .text(function(d) { return "MASS: "+ mass2 })
-                              .attr('x', svgWidth3 - 530)//your work here
-                              .attr('y',(svgHeight3 -170))//your work here
+  var forceLabel2 = svgContainer2.append('text')
+                              .text("CONSTANT FORCE: 2500N")
+                              .attr('x', forcelabel_x2)
+                              .attr('y',forcelabel_y2)
                               .attr("font-family","Lato")
-                              .attr("font-size","18pt");
+                              .attr("font-size","16pt");
+
+  var massLabel2 = svgContainer2.append('text')
+                              .text(function(d) { return "MASS: "+ mass2 })
+                              .attr('x', masslabel_x2)
+                              .attr('y', masslabel_y2)
+                              .attr("font-family","Lato")
+                              .attr("font-size","16pt");
 
   var accLabel2 = svgContainer2.append('text')
                               .text(function(d) { return "ACCELERATION: "+ acc2 })
-                              .attr('x', svgWidth3 - 250)//your work here
-                              .attr('y',(svgHeight3 -170))//your work here
+                              .attr('x', acclabel_x2)
+                              .attr('y',acclabel_y2)
                               .attr("font-family","Lato")
-                              .attr("font-size","18pt");
+                              .attr("font-size","16pt");
 
   rollButton2.on('click', function() {
   svgContainer2.selectAll("circle")
     .transition()
     .duration(duration2)
-    .attr("cx", 560)
-    .attr("cy", 100)
+    .attr("cx", box_width2 - circleRadii)
+    .attr("cy", circle_y2)
     .attr("r", function (d) { return d; })
     .ease("exp-in");
 
   scatterPlotDataset2.push({
-    "force":   force2,
+    "force": force2,
     "mass": mass2,
     "acc": acc2
-  });
+    });
+
+  graphSVG2.selectAll("circle")
+    .data(scatterPlotDataset2)
+    .enter()
+    .append("circle")
+    .attr("cx", function(d) {
+        return xScale2(d.mass);
+    })
+    .attr("cy", function(d) {
+        return yScale2(d.acc);
+    })
+    .attr("r", function(d){
+        return 7.5;
+    })
+    .attr("stroke", "black")
+    .attr("fill", function(d){
+         //return "rgb("+Math.round(colorScale2(d.mass))+",0,"+Math.round(colorScale2(d.mass))+")"
+         return "rgb(240, 80, 92)";
+    });
   });
 
   $( function() {
@@ -463,15 +556,15 @@ graphSVG.selectAll("circle")
         handle.text( ui.value );
         mass2 = ui.value;
         force2 = 2500;
-        acc2 = force2/mass2;
+        acc2 = Math.round(force2/mass2);
         duration2 = 100000/acc2;
         massLabel.transition()
                     .text(function(d) { return "MASS: "+ ui.value })
         accLabel2.transition()
                     .text(function(d) { return "ACCELERATION: "+ acc2 })
         svgContainer2.selectAll("circle")
-           .attr("cx", svgWidth3 - 490)
-           .attr("cy", 100)
+           .attr("cx", circle_x2)
+           .attr("cy", circle_y2)
            .attr("r", function (d) { return d; })
            .style("fill", function(d){
                 return "rgb(240, 80, 92)";
@@ -480,10 +573,7 @@ graphSVG.selectAll("circle")
       });
   } );
 
-  var graphDIV2 = d3.select('body')
-                  .append('div')
-                  .attr("class","graph2")
-  var graphSVG2 = graphDIV2.append('svg')
+  var graphSVG2 = intractiveContainer2DIV.append('svg')
                         .attr("width", 600)
                         .attr("height", 400);
   var xScale2 = d3.scale.linear()
@@ -514,73 +604,97 @@ graphSVG.selectAll("circle")
        .style("text-anchor", "end")
        .text("ACCELERATION");
 
-  var plotButton2= experiment2DIV.append("button")
-              .text("PLOT")
-              .attr("type","button")
-              .attr('x', svgWidth3 - 550)//your work here
-              .attr('y',(svgHeight3 -170))//your work here
-              .style("height",50)
-              .style("width",100);
-
-  plotButton2.on('click', function() {
-  graphSVG2.selectAll("circle")
-      .data(scatterPlotDataset2)
-      .enter()
-      .append("circle")
-      .attr("cx", function(d) {
-          return xScale2(d.mass);
-      })
-      .attr("cy", function(d) {
-          return yScale2(d.acc);
-      })
-      .attr("r", function(d){
-          return 7.5;
-      })
-      .attr("stroke", "black")
-      .attr("fill", function(d){
-           //return "rgb("+Math.round(colorScale2(d.mass))+",0,"+Math.round(colorScale2(d.mass))+")"
-           return "rgb(240, 80, 92)";
-      });
-  });
 
   function answer(){
-    return "Answer is M1 and F2 with Acceleration = 100N/kg"
+    return "The combination of M1 and F2 will produce a maximum acceleration = 100N/kg"
   }
   </script>
-  </div>
-  </div>
-  </div>
+</div>
+</div>
 </section>
 
-<section>
+<div class="container">
   <div class="col-sm-12">
-    <div class="experiment">
-      <h1 class="myblue bold">ANALYSIS</h1>
-      <p>This time, did you anything different in how the ball's speed changed as you increased the mass?
-        Now, the ball moved slower as you increased the mass. This kind of relation between two variables is called
-        <b>"Inverse Proportion".</b> This means, as one increases, the other variable decreases.<br><br>
-        Now look at the graph, how does it look? Does it look like the graph here, a curve in the shape of a slide?
-        If it doesn't, why don't you try out a few more values of mass?
-        <img src="img/newtongraph2.JPG" alt="Acc vs Mass" title="Acc vs Mass" class="img-responsive"/><br><br>
+      <h3><span class = "myblue bold">ANALYSIS</span></h3>
+        <p>This time, did you anything different in how the ball's speed changed as you increased the mass?
+          Now, the ball moved slower as you increased the mass. This kind of relation between two variables is called
+          <b>"Inverse Proportion".</b> This means, as one increases, the other variable decreases.<br><br>
+          Now look at the graph, how does it look? Does it look like the graph here, a curve in the shape of a slide?
+          If it doesn't, why don't you try out a few more values of mass?
+          <img class="myImg img-boxshadow img-responsive" src="img/newtongraph2.JPG" alt="Acc vs Force"/>
+          <p class="img-caption">Reciprocal Dependency Graph </p>
 
-        This kind of relationship is called <b>"Reciprocal Dependency"</b>. This means as the independent variable changes,
-        the dependent variable changes by an exponential factor that depends on the value of the independent variable.
-        That means, in this case, as you move from mass 10Kg to 100Kg the change in acceleration will slow down
-        (for a constant force of 2500N)<br><br></p>
-      <h1 class="myblue bold">SUMMARY</h1>
-      <p>To summarize, Newton's second law of motion basically means that acceleration is affected by both the force exerted and
-        the mass of the object. The more force exerted, the more acceleration is produced. The more mass the object has, the
-        lesser acceleration is produced. Thus force and mass kind of balance each other.<br><br></p>
-      <p>Now lets see if you've fully understood this. If I have 2 objects of masses M1 = 50kg and M2 = 80kg and 2 forces - F1 = 1000N
-        and F2 = 5000N, which combination of M and F will produce maximum acceleration, and what would that be?<br><br></p>
-
-        <button type="button" class="answerbutton" onclick="getElementById('answer').innerHTML= answer()">Answer</button>
-        <br><p id="answer"></p>
-      <p>I know the concepts of mass and forces seem abstract, so to help you understand better here are some forces and
-        masses that occur in nature that you can relate to!<br><br></p>
-        <img src="img/mass-force.jpg" alt="Selected forces and masses" title="Selected forces and masses" class="img-responsive"/><br><br>
+          This kind of relationship is called <b>"Reciprocal Dependency"</b>. This means as the independent variable changes,
+          the dependent variable changes by an exponential factor that depends on the value of the independent variable.
+          That means, in this case, as you move from mass 10Kg to 100Kg the change in acceleration will slow down
+          (for a constant force of 2500N)</p>
   </div>
-</section>
+</div>
 
+<div class="container">
+  <div class="col-sm-12 top-margin-60">
+      <h3><span class = "myblue bold top-margin-60">SUMMARY AND QUICK TEST</span></h3>
+        <p>To summarize, Newton's second law of motion basically means that acceleration is affected by both the force exerted and
+          the mass of the object. The more force exerted, the more acceleration is produced. The more mass the object has, the
+          lesser acceleration is produced. Thus force and mass kind of balance each other.<br><br></p>
+        <p>Now lets see if you've fully understood this. If I have 2 objects of masses M1 = 50kg and M2 = 80kg and 2 forces - F1 = 1000N
+          and F2 = 5000N, which combination of M and F will produce maximum acceleration, and what would that be?<br><br></p>
+
+          <button type="button" class="btn btn-success" onclick="getElementById('answer').innerHTML= answer()">Reveal Answer</button>
+          <br><h3 id="answer"></h3>
+  </div>
+
+  <div class="col-sm-12 top-margin-60">
+      <h3><span class = "myblue bold top-margin-60">PS - INTERPRETATIONS OF FORCE AND MASS WRT TO OUR WORLD</span></h3>
+        <p>I know the concepts of mass and forces seem abstract, so to help you understand better here are some forces and
+          masses that occur in nature. These will help you compare and comprehend these units better.<br><br></p>
+          <img src="img/mass-force.jpg" alt="Selected forces and masses" title="Selected forces and masses" class="img-responsive"/><br><br>
+  </div>
+</div>
+
+
+<!-- *** FOOTER ***
+_________________________________________________________ -->
+
+<div class="section" id="footer">
+    <div class="container">
+<div class="row col-md-6 col-md-offset-3">
+  <p class="template-bootstrapious"><span class="white">&copy; 2020 Jaee Apte. All rights reserved.</span></p>
+        </div>
+    </div>
+    <!-- /.container -->
+</div>
+<!-- /.section -->
+
+<!-- *** FOOTER END *** -->
+
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Mordernizr -->
+    <script src="js/modernizr-2.6.2.min.js"></script>
+
+    <!-- waypoints for scroll spy -->
+    <script src="js/waypoints.min.js"></script>
+
+    <!-- masonry layout -->
+    <script src="js/masonry.pkgd.min.js"></script>
+
+    <!-- owl carousel -->
+    <script src="js/owl.carousel.min.js"></script>
+
+
+    <!-- jQuery scroll to -->
+    <script src="js/jquery.scrollTo.min.js"></script>
+
+    <!-- jQuery counter -->
+    <script src="js/jquery.counterup.min.js"></script>
+
+    <!-- jQuery parallax -->
+    <script src="js/jquery.parallax-1.1.3.js"></script>
+
+    <!-- main js file -->
+    <script src="js/front.js"></script>
+    <!-- Google Analytics -->
+    <script src="js/analytics.js"></script>
 </body>
 </html>

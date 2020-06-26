@@ -1503,7 +1503,7 @@ hr {
   padding: 10px 20px;
   font-size: 16px;
   line-height: 1.42857143;
-  border-radius: 0;
+  border-radius: 3px;
 }
 .btn-primary {
   color: #f0505c;
