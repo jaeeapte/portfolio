@@ -558,7 +558,7 @@ graphSVG.append("text")
         force2 = 2500;
         acc2 = Math.round(force2/mass2);
         duration2 = 100000/acc2;
-        massLabel.transition()
+        massLabel2.transition()
                     .text(function(d) { return "MASS: "+ ui.value })
         accLabel2.transition()
                     .text(function(d) { return "ACCELERATION: "+ acc2 })
@@ -616,7 +616,7 @@ graphSVG.append("text")
 <div class="container">
   <div class="col-sm-12">
       <h3><span class = "myblue bold">ANALYSIS</span></h3>
-        <p>This time, did you anything different in how the ball's speed changed as you increased the mass?
+        <p>This time, did you notice anything different in how the ball's speed changed as you increased the mass?
           Now, the ball moved slower as you increased the mass. This kind of relation between two variables is called
           <b>"Inverse Proportion".</b> This means, as one increases, the other variable decreases.<br><br>
           Now look at the graph, how does it look? Does it look like the graph here, a curve in the shape of a slide?
