@@ -12,7 +12,7 @@
     <meta name="googlebot" content="index,follow,snippet,archive">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Visual Studio</title>
+    <title>Monte Carlo</title>
 
     <meta name="keywords" content="">
 
@@ -138,143 +138,42 @@ _________________________________________________________ -->
 		<div class="container">
 
 			<div class="mb20">
-				<h2 class="title section-begin">Microsoft Azure devops - Developer Productivity Tools</h2>
+				<h2 class="title section-begin">Monte Carlo - Data quality and observability</h2>
 		  </div>
 
 			<div class="col-md-8 col-md-offset-2 text-justify">
 
 			<div class="row">
 				<div class="column-left">
-					<h4 class="myblue bold lead">Role</h4><p class="text-medium bottom-margin-30" align="justify">Product Research and Development</p>
-					<h4 class="myblue bold lead">Company</h4><p class="text-medium bottom-margin-30" align="justify">Microsoft</p>
-					<h4 class="myblue bold lead">Timeline</h4><p class="text-medium bottom-margin-30" align="justify">Mar 2014 - Jul 2015</p>
+					<h4 class="myblue bold lead">Role</h4><p class="text-medium bottom-margin-30" align="justify">Product design and research</p>
+					<h4 class="myblue bold lead">Company</h4><p class="text-medium bottom-margin-30" align="justify">Monte Carlo</p>
+					<h4 class="myblue bold lead">Timeline</h4><p class="text-medium bottom-margin-30" align="justify">Jan 2023 - present</p>
           <!-- <p><a href="https://docs.google.com/presentation/d/1sZLSpclO0ENLDHHXWIUg9pkZbyBYkF9Z1Y3wtS7lQaw/edit?usp=sharing" target="_blank" class="btn btn-blue"><span class = "white">Presentation</span></a></p> -->
-      </div>
+        </div>
 
-				<div class="col-xs-12 col-xs-8">
+        <div class="col-xs-12 col-xs-8">
 					<h4 class="myblue bold lead">Problem</span></h4>
 					<p class="text-medium" align="justify">
-            Visual Studio Team Services is a part of Agile Developer Productivity (now called Azure devops) tools that help teams effectively collaborate and
-            manage their code. As a team's codebase expands, spawning across multiple projects and repositories, browsing code becomes increasingly
-            difficult. A regular text search is inefficient and insufficient at this scale. This called for the need of a much stronger
-            and domain specific searching mechanism.
+            Monte Carlo provides data observability through a combination of out of the box and custom rules on various
+            different data quality dimensions such as accuracy, validity, timeliness, consistency. Lineage is a core feature through which users not only
+            navigate their data stack, but also troubleshoot issues along the pipeline. Our existing lineage had many technical limitations and users
+            kept complaining about its usability.
 					 </p>
 
 					<h4 class="myblue bold lead top-margin-30">Solution</span></h4>
 					<p class="text-medium" align="justify">
-            Semantic Code Search is the one-stop solution to facilitate code exploration and troubleshooting needs. It provides fast and accurate search
-          across the entire code.</p>
+            We researched and built a new lineage that was fast, scalable and easy to use.</p>
 				</div>
 			</div>
 
       <div class="sectionproject" id="background">
         <!-- <div class="col-md-10 col-md-offset-1 text-justify"> -->
-          <h3><span class = "myblue bold">What is Visual Studio Team Services?</span></h3>
-          <p>The Visual Studio Team Services is a Developer Productivity Package that provides engineers all the tools needed at various
-          stages of product development. It helps you setup a git-based version control system, perform code review, continuous
-          integration, testing, deployment and reporting.</p><br>
+          <h3><span class = "myblue bold">Troubleshooting via data lineage</span></h3><br>
+          <img class="myImg img-boxshadow img-responsive" src="img/montecarlo-1.jpg" alt="Monte carlo lineage"/><br><br>
 
-          <p>In simple words, it makes an engineer's life simpler by integrating all these requirements into a single product.</p><br>
-          <img class="myImg img-boxshadow img-responsive" src="img/visualstudio1.jpg" alt="Visual Studio Team Services suite"/><br><br>
-
-          <h3><span class = "myblue bold">What is Code Search?</span></h3>
-          <p>As a team's codebase expands, spawning across multiple projects and repositories, browsing code becomes increasingly difficult.
-            A regular text search is inefficient and insufficient at this scale. This called for the need of a much stronger and domain
-            specific searching mechanism. </p><br>
-          <p>Imagine trying to find the perfect pair of earphones on Amazon without being able to sort or apply filters!</p><br>
-          <p>Code Search is an advanced searching tool that has powerful capabilities to narrow down search results to the exact code
-            instance that the user desires. It does that through a combination of relevance ranking and code filters.
-            So with Code Search, a user can find the exact file that contains the definition for a class called "Analysis", quickly.
-            She can also expand her search to find references of that class, or find other projects where the same class is being used.
-          </p><br>
-
-          <!-- Trigger the Modal -->
-          <img class="myImg img-boxshadow img-responsive" src="img/visualstudio2.jpg" alt="Semantic Code Search"/><br><br>
-
-          <!-- <img src="img/visualstudio2.jpg" title="Semantic Code Search" class="img-responsive"/><br> -->
-          <p>Having this type of searching capabilities helps users quickly get to what they are looking for and avoid wasting time
-            wading through irrelevant results.</p><br>
-
-          <h3><span class = "myblue bold">Code Search Design Decisions</span></h3>
-          <p>We conducted background on existing search tools, github search and some internal tools used in Microsoft.
-          We also conducted ethnographic research with some users, hovering over them in their cubicle as they went
-          about their day. Finally, we spoke with some user in 1:1 interviews about their workflow and the bottlenecks they
-          experience during in their work. This formed the basis for our design decisions.</p><br>
-
-          <h3 align="left"><span class = "doublebold">CODE SEARCH IS INTELLIGENT.</span></h3><br>
-            It's not just any search tool. It understands the code like it was written. It supports code type filters that
-            engineers use day in and day out. Imagine you're a user trying to find a declaration for the class "Analysis" in
-            your codebase. Without code search, you could easily run into a situation like this:</p><br>
-
-          <img class="myImg img-boxshadow img-responsive" src="img/visualstudio4.jpg" alt="Inefficient text search"/><br><br>
-
-          <p>This was a common problem faced across teams. It consumed a lot of time and efforts that could have been used elsewhere.
-            It's also such a tedious process to navigate code, it slowed down the users and affected their productivity.</p>
-
-          <p class="quote">"Navigating code is such a pain. Plus you don't know if you will actually find what you want."</p>
-          <p>Now with the code filters within code search, you can eliminate irrelevant results and quickly get to the file
-            that contains the class declaration.</p><br>
-
-          <img class="myImg img-boxshadow img-responsive" src="img/visualstudio5.jpg" alt="Code search filters make it efficient"/><br><br>
-
-          <h3 align="left"><span class = "doublebold">CODE SEARCH IMPROVES CROSS COLLABORATION.</span></h3><br>
-          There is so much cross-collaboration within teams these days, it's unlikely that
-          users will only work within their own code. Eventually, they will venture into unfamiliar code.</p>
-
-          <p>When we talked to users about how they make themselves familiar with unknown code, we found a similar pattern followed
-            by most users. They navigate the code to understand the structure and create a mental map of that code. Intelligent
-            IDEs make it easy to find references and dependencies. Standard naming conventions are additionally helpful in
-            connecting the dots. Thereafter it's free exploration based on educated guesses until they are comfortable with the code.</p><br>
-
-          <p class="quote">"Searching in an unfamiliar code can be quite daunting, especially when you don't know where to look."</p>
-
-          <p>With this knowledge, we incorporated a navigation system within Code Search to encourage exploration. While it's
-            impossible to know someone else's code as well as your own code, with easy navigation and powerful search, a user can
-            start to understand the structure and find their way.</p><br>
-
-          <p>With Code Search, a user can scope down a search result to a project. Once she is within the context of that project,
-            Code Search provides the internal file structure to help her explore that codebase. While she's is navigating through
-            the internal structure, the search results on the right are automatically updated to inform her if the given path contains
-            any hits.</p><br>
-
-          <img class="myImg img-boxshadow img-responsive" src="img/visualstudio6.jpg" alt="Scope down to projects and repositories"/><br><br>
-
-          <p>The response to this was quite positive and this feature ended up being super helpful to new members of a team, helping
-            them ramp up and get familiar with the code they will soon be working on.</p><br>
-
-          <h3 align="left"><span class = "doublebold">CODE SEARCH IS FOR BOTH, THE MOUSE AND THE KEYBOARD.</span></h3><br>
-            One of the user studies we conducted was an ethnographic research, in a cubicle! We wanted to observe how they code and
-            how they use the tools at their disposal. We made some very peculiar observations.</p><br>
-
-           <p>1. We observed a significantly large usage of keyboard. Typing provided a swiftness that pointing,
-             clicking and dragging couldn't.<br><br>
-             2. A lot of the users had the most commonly used shortcut commands memorized so that they could minimize the mouse usage.<br><br>
-             3. In a post test briefing one of the users mentioned that even though he saves maybe a second per command, over the
-             entire day it's repeated so much that he ends up saving a lot of time.</p><br>
-
-            <p class="quote">"Using a mouse or trackpad is equivalent to driving down a freeway at 70mph, only to find that
-             some idiot decided to put speed bumps on the freeway."</p><br>
-
-            <p>Eventually our goal was to improve user's productivity. We didn't want the "type" of interaction to hamper their speed or
-             discourage them from using it. Thus we came up with the idea of query filters. These are essentially the same code filters
-             as above, but now the user can just type them into the search query itself.</p><br>
-
-            <img class="myImg img-boxshadow img-responsive" src="img/visualstudio7.jpg" alt="Type filters into the query"/><br><br>
-
-             <p>The filters will be applied to the results during the execution of the search.</p><br>
-             <img class="myImg img-boxshadow img-responsive" src="img/visualstudio8.jpg" alt="Query filter results"/><br><br>
-
-            <h3><span class = "myblue bold">Launch and Impact</span></h3><br>
-    				<p>We launched Code Search to teams across Microsoft. It was an opt-in feature and within the first month we had over 500 teams
-              opt into Code Search. That's thousands of users and million lines of code. </p><br>
-
-            <p>We also had an open channel for feedback and it came pouring in. Most popularly to support more languages and
-              enable search across multiple git branches. This entire experience strengthened my interest in product research
-              and design and I completed my switch from an engineer to a full-time product person!</p><br>
-
-            <p>Sign up for a free visual studio account and check out <a href="https://www.visualstudio.com/" target="_blank"> Code Search</a>!<br></p>
-
-            <h3><a href="index.html#projectoverview"><span class = "myblue bold">Back to homepage</span></a></h3>
+          <p class="center-text">Shoot me an email to get access to the full case study and design demo.</p>
+          <p class="center-text"><a href="mailto:jaee.apte@gmail.com" class="btn btn-blue"><span class = "white">Send an email</span></a></p><br>
+          <h4 class="center-text"><a href="index.html#projectoverview"><span class = "myblue bold">Back to homepage</span></a></h3>
 
 			</div>
 
@@ -309,15 +208,15 @@ _________________________________________________________ -->
   				<div class="container">
                   <div class="col-sm-12">
                       <div class="mb20">
-                          <h2 class="title" data-animate="fadeInUp"><span class = "white">Other work</h2>
+                          <h2 class="title" data-animate="fadeInUp"><span class = "white">Related work</h2>
                       </div>
 
   					<div id="references-masonry" data-animate="fadeInUp">
 
               <div class="reference-item" data-category="interactiondesign">
                   <div class="reference">
-                      <a href="rollbar.html">
-                          <img src="img/icons_rollbar.jpg" class="img-responsive" alt="" />
+                      <a href="domino.html">
+                          <img src="img/icons_domino.jpg" class="img-responsive" alt="" />
                       </a>
                   </div>
               </div>
