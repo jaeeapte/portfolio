@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="robots" content="all,follow">
+    <meta name="googlebot" content="index,follow,snippet,archive">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Monte Carlo</title>
+
+    <meta name="keywords" content="">
+
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+
+    <!-- <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,100%7CRoboto:400,700,300,100' rel='stylesheet' type='text/css'> -->
+  	<!-- <link href='https://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'> -->
+
+    <!-- Bootstrap and Font Awesome css -->
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Theme stylesheet -->
+    <link href="css/style.default.css" rel="stylesheet" id="theme-stylesheet">
+
+    <!-- owl carousel css -->
+
+    <link href="css/owl.carousel.css" rel="stylesheet">
+    <link href="css/owl.theme.css" rel="stylesheet">
+
+    <!-- CSS Animations -->
+    <link href="css/animate.css" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.png">
+
+  	<!-- Colours -->
+  	<link id="colours" rel="stylesheet" href="css/colour.css" />
+
+    // Rollbar Snippet
+    		<script>
+    		var _rollbarConfig = {
+    		    accessToken: "a861938596504d259aea368dfcf7641f",
+    		    captureUncaught: true,
+    		    captureUnhandledRejections: true,
+    		    payload: {
+    		        environment: "production"
+    		    }
+    		};
+
+    		!function(r){var e={};function o(n){if(e[n])return e[n].exports;var t=e[n]={i:n,l:!1,exports:{}};return r[n].call(t.exports,t,t.exports,o),t.l=!0,t.exports}o.m=r,o.c=e,o.d=function(r,e,n){o.o(r,e)||Object.defineProperty(r,e,{enumerable:!0,get:n})},o.r=function(r){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(r,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(r,"__esModule",{value:!0})},o.t=function(r,e){if(1&e&&(r=o(r)),8&e)return r;if(4&e&&"object"==typeof r&&r&&r.__esModule)return r;var n=Object.create(null);if(o.r(n),Object.defineProperty(n,"default",{enumerable:!0,value:r}),2&e&&"string"!=typeof r)for(var t in r)o.d(n,t,function(e){return r[e]}.bind(null,t));return n},o.n=function(r){var e=r&&r.__esModule?function(){return r.default}:function(){return r};return o.d(e,"a",e),e},o.o=function(r,e){return Object.prototype.hasOwnProperty.call(r,e)},o.p="",o(o.s=0)}([function(r,e,o){"use strict";var n=o(1),t=o(4);_rollbarConfig=_rollbarConfig||{},_rollbarConfig.rollbarJsUrl=_rollbarConfig.rollbarJsUrl||"https://cdn.rollbar.com/rollbarjs/refs/tags/v2.16.2/rollbar.min.js",_rollbarConfig.async=void 0===_rollbarConfig.async||_rollbarConfig.async;var a=n.setupShim(window,_rollbarConfig),l=t(_rollbarConfig);window.rollbar=n.Rollbar,a.loadFull(window,document,!_rollbarConfig.async,_rollbarConfig,l)},function(r,e,o){"use strict";var n=o(2);function t(r){return function(){try{return r.apply(this,arguments)}catch(r){try{console.error("[Rollbar]: Internal error",r)}catch(r){}}}}var a=0;function l(r,e){this.options=r,this._rollbarOldOnError=null;var o=a++;this.shimId=function(){return o},"undefined"!=typeof window&&window._rollbarShims&&(window._rollbarShims[o]={handler:e,messages:[]})}var i=o(3),s=function(r,e){return new l(r,e)},d=function(r){return new i(s,r)};function c(r){return t((function(){var e=this,o=Array.prototype.slice.call(arguments,0),n={shim:e,method:r,args:o,ts:new Date};window._rollbarShims[this.shimId()].messages.push(n)}))}l.prototype.loadFull=function(r,e,o,n,a){var l=!1,i=e.createElement("script"),s=e.getElementsByTagName("script")[0],d=s.parentNode;i.crossOrigin="",i.src=n.rollbarJsUrl,o||(i.async=!0),i.onload=i.onreadystatechange=t((function(){if(!(l||this.readyState&&"loaded"!==this.readyState&&"complete"!==this.readyState)){i.onload=i.onreadystatechange=null;try{d.removeChild(i)}catch(r){}l=!0,function(){var e;if(void 0===r._rollbarDidLoad){e=new Error("rollbar.js did not load");for(var o,n,t,l,i=0;o=r._rollbarShims[i++];)for(o=o.messages||[];n=o.shift();)for(t=n.args||[],i=0;i<t.length;++i)if("function"==typeof(l=t[i])){l(e);break}}"function"==typeof a&&a(e)}()}})),d.insertBefore(i,s)},l.prototype.wrap=function(r,e,o){try{var n;if(n="function"==typeof e?e:function(){return e||{}},"function"!=typeof r)return r;if(r._isWrap)return r;if(!r._rollbar_wrapped&&(r._rollbar_wrapped=function(){o&&"function"==typeof o&&o.apply(this,arguments);try{return r.apply(this,arguments)}catch(o){var e=o;throw e&&("string"==typeof e&&(e=new String(e)),e._rollbarContext=n()||{},e._rollbarContext._wrappedSource=r.toString(),window._rollbarWrappedError=e),e}},r._rollbar_wrapped._isWrap=!0,r.hasOwnProperty))for(var t in r)r.hasOwnProperty(t)&&(r._rollbar_wrapped[t]=r[t]);return r._rollbar_wrapped}catch(e){return r}};for(var u="log,debug,info,warn,warning,error,critical,global,configure,handleUncaughtException,handleAnonymousErrors,handleUnhandledRejection,captureEvent,captureDomContentLoaded,captureLoad".split(","),p=0;p<u.length;++p)l.prototype[u[p]]=c(u[p]);r.exports={setupShim:function(r,e){if(r){var o=e.globalAlias||"Rollbar";if("object"==typeof r[o])return r[o];r._rollbarShims={},r._rollbarWrappedError=null;var a=new d(e);return t((function(){e.captureUncaught&&(a._rollbarOldOnError=r.onerror,n.captureUncaughtExceptions(r,a,!0),e.wrapGlobalEventHandlers&&n.wrapGlobals(r,a,!0)),e.captureUnhandledRejections&&n.captureUnhandledRejections(r,a,!0);var t=e.autoInstrument;return!1!==e.enabled&&(void 0===t||!0===t||"object"==typeof t&&t.network)&&r.addEventListener&&(r.addEventListener("load",a.captureLoad.bind(a)),r.addEventListener("DOMContentLoaded",a.captureDomContentLoaded.bind(a))),r[o]=a,a}))()}},Rollbar:d}},function(r,e,o){"use strict";function n(r,e,o,n){r._rollbarWrappedError&&(n[4]||(n[4]=r._rollbarWrappedError),n[5]||(n[5]=r._rollbarWrappedError._rollbarContext),r._rollbarWrappedError=null);var t=e.handleUncaughtException.apply(e,n);o&&o.apply(r,n),"anonymous"===t&&(e.anonymousErrorsPending+=1)}function t(r,e,o){if(e.hasOwnProperty&&e.hasOwnProperty("addEventListener")){for(var n=e.addEventListener;n._rollbarOldAdd&&n.belongsToShim;)n=n._rollbarOldAdd;var t=function(e,o,t){n.call(this,e,r.wrap(o),t)};t._rollbarOldAdd=n,t.belongsToShim=o,e.addEventListener=t;for(var a=e.removeEventListener;a._rollbarOldRemove&&a.belongsToShim;)a=a._rollbarOldRemove;var l=function(r,e,o){a.call(this,r,e&&e._rollbar_wrapped||e,o)};l._rollbarOldRemove=a,l.belongsToShim=o,e.removeEventListener=l}}r.exports={captureUncaughtExceptions:function(r,e,o){if(r){var t;if("function"==typeof e._rollbarOldOnError)t=e._rollbarOldOnError;else if(r.onerror){for(t=r.onerror;t._rollbarOldOnError;)t=t._rollbarOldOnError;e._rollbarOldOnError=t}e.handleAnonymousErrors();var a=function(){var o=Array.prototype.slice.call(arguments,0);n(r,e,t,o)};o&&(a._rollbarOldOnError=t),r.onerror=a}},captureUnhandledRejections:function(r,e,o){if(r){"function"==typeof r._rollbarURH&&r._rollbarURH.belongsToShim&&r.removeEventListener("unhandledrejection",r._rollbarURH);var n=function(r){var o,n,t;try{o=r.reason}catch(r){o=void 0}try{n=r.promise}catch(r){n="[unhandledrejection] error getting `promise` from event"}try{t=r.detail,!o&&t&&(o=t.reason,n=t.promise)}catch(r){}o||(o="[unhandledrejection] error getting `reason` from event"),e&&e.handleUnhandledRejection&&e.handleUnhandledRejection(o,n)};n.belongsToShim=o,r._rollbarURH=n,r.addEventListener("unhandledrejection",n)}},wrapGlobals:function(r,e,o){if(r){var n,a,l="EventTarget,Window,Node,ApplicationCache,AudioTrackList,ChannelMergerNode,CryptoOperation,EventSource,FileReader,HTMLUnknownElement,IDBDatabase,IDBRequest,IDBTransaction,KeyOperation,MediaController,MessagePort,ModalWindow,Notification,SVGElementInstance,Screen,TextTrack,TextTrackCue,TextTrackList,WebSocket,WebSocketWorker,Worker,XMLHttpRequest,XMLHttpRequestEventTarget,XMLHttpRequestUpload".split(",");for(n=0;n<l.length;++n)r[a=l[n]]&&r[a].prototype&&t(e,r[a].prototype,o)}}}},function(r,e,o){"use strict";function n(r,e){this.impl=r(e,this),this.options=e,function(r){for(var e=function(r){return function(){var e=Array.prototype.slice.call(arguments,0);if(this.impl[r])return this.impl[r].apply(this.impl,e)}},o="log,debug,info,warn,warning,error,critical,global,configure,handleUncaughtException,handleAnonymousErrors,handleUnhandledRejection,_createItem,wrap,loadFull,shimId,captureEvent,captureDomContentLoaded,captureLoad".split(","),n=0;n<o.length;n++)r[o[n]]=e(o[n])}(n.prototype)}n.prototype._swapAndProcessMessages=function(r,e){var o,n,t;for(this.impl=r(this.options);o=e.shift();)n=o.method,t=o.args,this[n]&&"function"==typeof this[n]&&("captureDomContentLoaded"===n||"captureLoad"===n?this[n].apply(this,[t[0],o.ts]):this[n].apply(this,t));return this},r.exports=n},function(r,e,o){"use strict";r.exports=function(r){return function(e){if(!e&&!window._rollbarInitialized){for(var o,n,t=(r=r||{}).globalAlias||"Rollbar",a=window.rollbar,l=function(r){return new a(r)},i=0;o=window._rollbarShims[i++];)n||(n=o.handler),o.handler._swapAndProcessMessages(l,o.messages);window[t]=n,window._rollbarInitialized=!0}}}}]);
+    		// End Rollbar Snippet
+    		</script>
+
+    <!--Full Story script-->
+		<script>
+      window['_fs_debug'] = false;
+      window['_fs_host'] = 'fullstory.com';
+      window['_fs_script'] = 'edge.fullstory.com/s/fs.js';
+      window['_fs_org'] = 'D1SFA';
+      window['_fs_namespace'] = 'FS';
+      (function(m,n,e,t,l,o,g,y){
+          if (e in m) {if(m.console && m.console.log) { m.console.log('FullStory namespace conflict. Please set window["_fs_namespace"].');} return;}
+          g=m[e]=function(a,b,s){g.q?g.q.push([a,b,s]):g._api(a,b,s);};g.q=[];
+          o=n.createElement(t);o.async=1;o.crossOrigin='anonymous';o.src='https://'+_fs_script;
+          y=n.getElementsByTagName(t)[0];y.parentNode.insertBefore(o,y);
+          g.identify=function(i,v,s){g(l,{uid:i},s);if(v)g(l,v,s)};g.setUserVars=function(v,s){g(l,v,s)};g.event=function(i,v,s){g('event',{n:i,p:v},s)};
+          g.anonymize=function(){g.identify(!!0)};
+          g.shutdown=function(){g("rec",!1)};g.restart=function(){g("rec",!0)};
+          g.log = function(a,b){g("log",[a,b])};
+          g.consent=function(a){g("consent",!arguments.length||a)};
+          g.identifyAccount=function(i,v){o='account';v=v||{};v.acctId=i;g(o,v)};
+          g.clearUserCookie=function(){};
+          g.setVars=function(n, p){g('setVars',[n,p]);};
+          g._w={};y='XMLHttpRequest';g._w[y]=m[y];y='fetch';g._w[y]=m[y];
+          if(m[y])m[y]=function(){return g._w[y].apply(this,arguments)};
+          g._v="1.3.0";
+      })(window,document,window['_fs_namespace'],'script','user');
+      </script>
+
+</head>
+
+<body data-spy="scroll" data-target="#navigation" data-offset="120">
+
+<!-- *** NAVBAR ***
+_________________________________________________________ -->
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation" id="navbar">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">JAEE <span class="gray">APTE</span>.</a>
+            </div>
+
+            <div class="navbar-collapse collapse">
+
+                <ul class="nav navbar-nav navbar-right">
+                    <!-- <li><a href="#designprocess" class="page-scroll">Design Process</a>
+                    </li>
+          					<li><a href="#homepage" class="page-scroll">Homepage Redesign</a>
+                              </li> -->
+                              <!-- <li><a href="#playbook" class="page-scroll">Playbook</a>
+                              </li> -->
+          					<li><a href="resources/jaee-apte-resume.pdf" target="_blank">Resume</a>
+                              </li>
+                </ul>
+
+          <!-- <ul class="nav navbar-nav navbar-left">
+                      <li><a href="ecoach.html">Previous</a>
+                      </li>
+            <li><a href="xplor.html">Next</a>
+                      </li>
+          </ul> -->
+            </div>
+            <!--/.nav-collapse -->
+
+        </div>
+    </div>
+    <!-- /#navbar -->
+
+    <!-- *** NAVBAR END *** -->
+
+	<!-- *** REFERENCES IMAGE ***
+_________________________________________________________ -->
+
+	<div class="section" id="projects">
+		<div class="container">
+
+			<div class="mb20">
+				<h2 class="title section-begin">Monte Carlo - Redesign data lineage experience</h2>
+		  </div>
+
+			<div class="col-md-10 col-md-offset-1 text-justify">
+
+			<div class="row">
+				<div class="column-left">
+					<h4 class="myblue bold lead">Role</h4><p class="text-medium bottom-margin-30" align="justify">Product design and research</p>
+					<h4 class="myblue bold lead">Company</h4><p class="text-medium bottom-margin-30" align="justify">Monte Carlo</p>
+					<h4 class="myblue bold lead">Timeline</h4><p class="text-medium bottom-margin-30" align="justify">Jan 2023 - present</p>
+          <!-- <p><a href="https://docs.google.com/presentation/d/1sZLSpclO0ENLDHHXWIUg9pkZbyBYkF9Z1Y3wtS7lQaw/edit?usp=sharing" target="_blank" class="btn btn-blue"><span class = "white">Presentation</span></a></p> -->
+        </div>
+
+        <div class="col-xs-12 col-xs-8">
+					<h4 class="myblue bold lead">Problem</span></h4>
+					<p class="text-medium" align="justify">
+            Monte Carlo provides data observability through a combination of out of the box and custom rules on various
+            different data quality dimensions such as accuracy, validity, timeliness, consistency. We wanted to improve our troubleshooting and investigation 
+            offerings and improve time to resolution for incidents.
+					 </p>
+
+					<h4 class="myblue bold lead top-margin-30">Solution</span></h4>
+					<p class="text-medium" align="justify">
+            Lineage is a core feature through which users not only navigate their data stack, but also troubleshoot issues along the pipeline. Our existing 
+            lineage had many technical and usability problems that users frequently complained about.</p>
+				</div>
+			</div>
+
+      <div class="sectionproject" id="background">
+        <!-- <div class="col-md-10 col-md-offset-1 text-justify"> -->
+          <!-- <h3><span class = "myblue bold">LLM Troubleshooting agent to investigate data observability issues</span></h3><br> -->
+           <p> </p>
+           <h3><span class = "myblue bold">Lineage issues</span></h3>
+           <p class = "bottom-margin-30">Lineage is one of the most used features in our product. New users find it as a great way to start exploring the 
+            product because it gives them a good overview of their data architecture visually.  Seasoned users rely on lineage trace upstream causes and 
+            downstream impact. Our existing lineage really frustrated users resulting in poor retention and tons of support tickets.</p>
+
+           <h4 align="left"><span class = "doublebold">Layout and canvas issues</span></h4>
+           <p class = "bottom-margin-30">Lineage canvas was placed inside a card, awkward to navigate especially on very busy graphs.</p>
+           <img class="myImg img-boxshadow img-responsive" src="img/montecarlo-1.gif" alt="Layout and canvas issues"/><br><br> 
+
+           <h4 align="left"><span class = "doublebold">Handling massive graphs</span></h4>
+           <p class = "bottom-margin-30">Trying to bulk-expand the graph was very slow and the expanded graph gets really messy and unruly. Also the 
+            interaction for bulk selection was done by choosing how many levels of nodes to be expanded (depth). Users called out that was not intuitive 
+          and cumbersome.</p>
+           <img class="myImg img-boxshadow img-responsive" src="img/montecarlo-2.gif" alt="Handling massive graphs"/><br><br> 
+           
+           <h4 align="left"><span class = "doublebold">Poor filtering experience</span></h4>
+           <p class = "bottom-margin-30">For large graphs being able to filter out certain types of nodes is critical. But filtering out irrelevant nodes 
+            in the lineage did not hide the nodes fully, this was an implementation detail that became a technical restriction. As a result, the lineage 
+            still had poor readability.</p>
+           <img class="myImg img-boxshadow img-responsive" src="img/montecarlo-3.gif" alt="Poor filtering experience"/><br><br> 
+
+           <h4 align="left"><span class = "doublebold">Poor and buggy upstream tracing usability</span></h4>
+           <p class = "bottom-margin-30">Tracing incidents on the current and upstream nodes was done via a pop-over list. It was very clunky, didn't scale 
+            well for a long list and had been buggy for a while as the hyperlink was broken.</p>
+           <img class="myImg img-boxshadow img-responsive" src="img/montecarlo-4.gif" alt="Poor and buggy upstream tracing usability"/><br><br> 
+
+           <h4 align="left"><span class = "doublebold">Buggy node details</span></h4>
+           <p class = "bottom-margin-30">We had a toggle that allowed user to control the density of information they can see on a node. When they're just 
+            exploring relationships, a smaller node size is preferred. But when user is drilling down into a specific section of the lineage, the detailed 
+            view is more relevant. But even this interaction was buggy, some information was not showing up or showing incorrect data.</p>
+           <img class="myImg img-boxshadow img-responsive" src="img/montecarlo-5.gif" alt="Buggy node details"/><br><br> 
+
+           <h4 align="left"><span class = "doublebold">Competitive lineage analysis</span></h4>
+           <img class="myImg img-boxshadow img-responsive" src="img/montecarlo-6.gif" alt="Competitive lineage analysis"/><br><br> 
+
+           <p class="quote">"We explored and tested a handful of lineage libraries and visual structure of the nodes to narrow down the ones that best 
+            suited our requirements."</p>
+
+           <img class="myImg img-boxshadow img-responsive" src="img/montecarlo-7.png" alt="Node options"/><br>
+           <img class="myImg img-boxshadow img-responsive" src="img/montecarlo-8.png" alt="Lineage exploration 1"/><br>
+           <img class="myImg img-boxshadow img-responsive" src="img/montecarlo-9.png" alt="Lineage exploration 2"/><br>
+           <img class="myImg img-boxshadow img-responsive" src="img/montecarlo-10.png" alt="Lineage exploration 3"/><br>
+           <img class="myImg img-boxshadow img-responsive" src="img/montecarlo-11.png" alt="Lineage exploration 4"/><br>
+
+           <p class="quote">"Let's walk through the final redesigned lineage."</p>
+
+           <h4 align="left"><span class = "doublebold">Improved canvas that is seamless and snappy</span></h4>
+           <p class = "bottom-margin-30">The lineage canvas now occupies the full page. The new canvas also provides some standard patterns such as 
+            trackpad zooming and rearranging nodes.</p>
+           <img class="myImg img-boxshadow img-responsive" src="img/montecarlo-12.gif" alt="Improved canvas that is seamless and snappy"/><br><br> 
+
+           <h4 align="left"><span class = "doublebold">Lazy loading to handle massive graphs</span></h4>
+           <p class = "bottom-margin-30">We simplified bulk-expansion of the lineage by providing lazy loading that expands the lineage as 
+            the user navigates around the canvas.</p>
+           <img class="myImg img-boxshadow img-responsive" src="img/montecarlo-13.gif" alt="Lazy loading to handle massive graphs"/><br><br> 
+
+           <h4 align="left"><span class = "doublebold">Better filtering</span></h4>
+           <p class = "bottom-margin-30">Users can now fully hide nodes by applying filters making the lineage a lot more readable. 
+            The performance is fast and snappy.</p>
+           <img class="myImg img-boxshadow img-responsive" src="img/montecarlo-14.gif" alt="Better filtering"/><br><br> 
+
+           <h4 align="left"><span class = "doublebold">Tracing upstream is simpler, bugs fixed</span></h4>
+           <p class = "bottom-margin-30">We improved the incident overlay on the node, allowing the ability to set lookback period and view recent 
+            alerts in a drawer. This makes it easier for the users to trace incidents along a pipeline.</p>
+           <img class="myImg img-boxshadow img-responsive" src="img/montecarlo-15.gif" alt="Tracing upstream is simpler"/><br><br>
+
+           <h4 align="left"><span class = "doublebold">Feature parity by allowing users to collapse nodes</span></h4>
+           <p class = "bottom-margin-30">Previously users could only expand nodes, but not collapse. Added a new feature that was requested by users: 
+            ability to collapse expanded nodes.</p>
+           <img class="myImg img-boxshadow img-responsive" src="img/montecarlo-16.gif" alt="Feature parity by allowing users to collapse nodes"/><br><br>
+           
+            <p class="quote">"Impact"</p>
+
+           <p class = "bottom-margin-30">We did not see any significant increase in the number of users. Lineage is one of the most used features of our product, 
+            so it was already over 75% of our weekly active users. We did notice 2 interesting findings:</p>
+            <p class = "bottom-margin-30">User retention on lineage improved. We would see a dropoff after 10 weeks, but the new lineage manages at 
+              40% retention even at week 15.</p>
+           <img class="myImg img-boxshadow img-responsive" src="img/montecarlo-17.png" alt="User retention improved"/><br><br>
+
+           <p class = "bottom-margin-30">There was a small increase in conversion of users investigating incidents after using lineage.</p>
+            <img class="myImg img-boxshadow img-responsive" src="img/montecarlo-18.png" alt="User retention improved"/><br><br>
+
+           <p class = "bottom-margin-30">Qualitative feedback from users was positive and support tickets for lineage went down by 60%</p>
+            <img class="myImg img-boxshadow img-responsive" src="img/montecarlo-19.png" alt="User retention improved"/><br><br>
+            <img class="myImg img-boxshadow img-responsive" src="img/montecarlo-20.png" alt="User retention improved"/><br><br>
+
+          <p class="center-text">Please send me an email to get access to the full case study and design demo.</p><br>
+          <p class="center-text"><a href="mailto:jaee.apte@gmail.com" class="btn btn-blue"><span class = "white">Send an email</span></a></p>
+          <h4 class="center-text"><a href="index.html#projectoverview"><span class = "myblue bold">Back to homepage</span></a></h3>
+
+			</div>
+
+      <!-- The Modal -->
+      <div id="myModal" class="modal">
+
+        <!-- Modal Content (The Image) -->
+        <img class="modal-content" id="img01">
+
+        <!-- Modal Caption (Image Text) -->
+        <div id="caption"></div>
+        <div id="dismiss"></div>
+
+      </div>
+
+			</div>
+
+		</div>
+		<!-- /.container -->
+	</div>
+	<!-- /.section -->
+
+	<!-- *** REFERENCES END *** -->
+
+  <!-- *** FOOTER ***
+  _________________________________________________________ -->
+
+          <div class="section" id="footer">
+              <div class="container">
+
+                  <div class="section" id="work">
+  				<div class="container">
+                  <div class="col-sm-12">
+                      <div class="mb20">
+                          <h2 class="title" data-animate="fadeInUp"><span class = "white">Related work</h2>
+                      </div>
+
+  					<div id="references-masonry" data-animate="fadeInUp">
+
+              <div class="reference-item" data-category="interactiondesign">
+                  <div class="reference">
+                      <a href="rollbar.html">
+                          <img src="img/icons_rollbar.jpg" class="img-responsive" alt="" />
+                      </a>
+                  </div>
+              </div>
+
+  					</div>
+            <!--references-masonry-->
+          </div>
+          <!-- /.12 -->
+        </div>
+        <!-- /.container -->
+
+  		</div>
+          <!-- /.section -->
+
+          <!-- *** WORK END *** -->
+          </div>
+          <!-- /.container -->
+          </div>
+          <!-- /.section -->
+
+          <!-- *** FOOTER END *** -->
+
+
+    <!-- #### JAVASCRIPT FILES ### -->
+
+    <!-- js base -->
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Mordernizr -->
+    <script src="js/modernizr-2.6.2.min.js"></script>
+
+    <!-- for demo purpose -->
+    <script src="js/jquery.cookie.js"></script>
+
+    <!-- waypoints for scroll spy -->
+    <script src="js/waypoints.min.js"></script>
+
+    <!-- maps -->
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
+    <script src="js/gmaps.js"></script> -->
+
+    <!-- masonry layout -->
+    <script src="js/masonry.pkgd.min.js"></script>
+
+    <!-- owl carousel -->
+    <script src="js/owl.carousel.min.js"></script>
+
+
+    <!-- jQuery scroll to -->
+    <script src="js/jquery.scrollTo.min.js"></script>
+
+    <!-- jQuery counter -->
+    <script src="js/jquery.counterup.min.js"></script>
+
+    <!-- jQuery parallax -->
+    <script src="js/jquery.parallax-1.1.3.js"></script>
+
+    <!-- main js file -->
+    <script src="js/front.js"></script>
+    <!-- Google Analytics -->
+    <script src="js/analytics.js"></script>
+
+</body>
+
+</html>

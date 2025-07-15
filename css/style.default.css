@@ -641,7 +641,12 @@ WORKS / REFERENCES
   }
 }
 .reference-item {
+  /* Two card per row */
+  width: 540px;
+  
+  /* Single card per row
   width: 1100px;
+  */
   /*overflow: hidden;*/
 }
 .reference-item .reference{
